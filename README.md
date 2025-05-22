@@ -11,9 +11,6 @@
   <a href="https://www.linkedin.com/in/tiago-cenci-218962223/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Tiago%20Cenci-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="https://github.com/cenci-ntido" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-tiagocenci-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
-  </a>
 </p>
 
 ---
@@ -23,6 +20,14 @@
 This is my personal portfolio, built to showcase my skills across **product management**, **software development**, and **UX/UI design**.
 
 > 🔥 Built with performance, dark mode, animations and a tech-inspired layout.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, TailwindCSS, Vite
+- **Versioning:** Git + GitHub
+- **Hosting:** Vercel
 
 ---
 
