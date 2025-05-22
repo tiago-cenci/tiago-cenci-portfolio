@@ -34,7 +34,7 @@ This is my personal portfolio, built to showcase my skills across **product mana
 ## 📷 Preview
 
 <p align="center">
-  <img src="https://imgur.com/UfqMT6K" alt="Portfolio Preview" width="100%"/>
+  <img src="https://i.imgur.com/UfqMT6K.png" alt="Portfolio Preview" width="100%"/>
 </p>
 
 ---
