@@ -44,6 +44,7 @@ const uxProjects = [
     tags: ["UX Research", "Wireframing", "Prototyping", "Usability Testing"],
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
     githubLink: "https://behance.net",
+    demoLink: null, // Adding demoLink property with null value for UX projects
     isUXProject: true
   },
   {
@@ -53,6 +54,7 @@ const uxProjects = [
     tags: ["User Research", "Information Architecture", "Visual Design"],
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
     githubLink: "https://behance.net",
+    demoLink: null, // Adding demoLink property with null value for UX projects
     isUXProject: true
   }
 ];

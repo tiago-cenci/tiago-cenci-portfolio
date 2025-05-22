@@ -8,7 +8,7 @@ interface ProjectCardProps {
   tags: string[];
   image: string;
   githubLink: string;
-  demoLink?: string;
+  demoLink?: string | null; // Updated to be optional and accept null
   index: number;
   isUXProject?: boolean;
 }
