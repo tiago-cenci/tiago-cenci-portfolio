@@ -5,42 +5,22 @@ import ProjectCard from "./ProjectCard";
 //  project data
 const devProjects = [
   {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "A full-stack e-commerce platform with product catalog, user authentication, and payment processing.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&w=1000&q=80",
-    githubLink: "https://github.com",
-    demoLink: "https://demo.com",
-    isUXProject: false
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "A collaborative project management tool with drag-and-drop kanban boards, task assignments, and real-time updates.",
-    tags: ["React", "Firebase", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&w=1000&q=80",
-    githubLink: "https://github.com",
-    demoLink: "https://demo.com",
-    isUXProject: false
-  },
-  {
     id: 3,
-    title: "Finance Dashboard",
-    description: "Interactive data visualization dashboard for financial metrics with real-time data updates and advanced filtering.",
-    tags: ["TypeScript", "D3.js", "Express"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&w=1000&q=80",
+    title: "Text to SQL - NLP",
+    description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
+    tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
+    image: "https://i.imgur.com/z9WCoV6.png",
     githubLink: "https://github.com",
-    demoLink: "https://demo.com",
+    demoLink: null,
     isUXProject: false
   }
 ];
 
 const uxProjects = [
   {
-    id: 4,
-    title: "Healthcare App Redesign",
-    description: "UX case study for redesigning patient experience in a healthcare application with focus on accessibility.",
+    id: 2,
+    title: "Activity Management App for Law Firms [PTBR]",
+    description: "A fictional case study to demonstrate my knowledge of product discovery, MVP definition, backlog prioritization, technical specification, launch, and monitoring.",
     tags: ["UX Research", "Wireframing", "Prototyping", "Usability Testing"],
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
     githubLink: "https://behance.net",
@@ -48,7 +28,7 @@ const uxProjects = [
     isUXProject: true
   },
   {
-    id: 5,
+    id: 1,
     title: "Smart Home Concept",
     description: "Complete design process for a smart home control app, focusing on intuitive interactions and visual hierarchy.",
     tags: ["User Research", "Information Architecture", "Visual Design"],
