@@ -10,20 +10,20 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="text-xl font-bold font-mono text-primary">Tiago Cenci</div>
-            <p className="text-sm text-foreground/60 mt-1">Product Manager & Tech Enthusiast</p>
+            <p className="text-sm text-foreground/60 mt-1">Product vision focused on the user.</p>
           </div>
-          
+
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
-              <a 
-                href="https://github.com"
+              <a
+                href="https://github.com/tiago-cenci"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
               >
                 GitHub
               </a>
-              <a 
+              <a
                 href="https://www.linkedin.com/in/tiago-cenci-218962223/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -31,7 +31,7 @@ const Footer = () => {
               >
                 LinkedIn
               </a>
-              <a 
+              <a
                 href="https://linktr.ee/tiago_cenci"
                 target="_blank"
                 rel="noopener noreferrer"

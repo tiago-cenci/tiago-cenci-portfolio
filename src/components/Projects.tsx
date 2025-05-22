@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
 
-// Sample project data
+//  project data
 const devProjects = [
   {
     id: 1,
@@ -65,10 +65,10 @@ const Projects = () => {
   // Get projects based on filter
   const getFilteredProjects = () => {
     switch (activeFilter) {
-      case 'dev':
-        return devProjects;
       case 'ux':
         return uxProjects;
+      case 'dev':
+        return devProjects;
       default:
         return [...devProjects, ...uxProjects];
     }
@@ -87,30 +87,30 @@ const Projects = () => {
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <button
               className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'all'
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-foreground/70 hover:text-foreground"
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-foreground/70 hover:text-foreground"
                 }`}
               onClick={() => setActiveFilter('all')}
             >
               All Projects
             </button>
             <button
+              className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'ux'
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-foreground/70 hover:text-foreground"
+                }`}
+              onClick={() => setActiveFilter('ux')}
+            >
+              Product & UX/UI
+            </button>
+            <button
               className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'dev'
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-foreground/70 hover:text-foreground"
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-foreground/70 hover:text-foreground"
                 }`}
               onClick={() => setActiveFilter('dev')}
             >
               Development
-            </button>
-            <button
-              className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'ux'
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-foreground/70 hover:text-foreground"
-                }`}
-              onClick={() => setActiveFilter('ux')}
-            >
-              UX/UI Design
             </button>
           </div>
         </div>
@@ -130,17 +130,6 @@ const Projects = () => {
               isUXProject={project.isUXProject}
             />
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          >
-            View All Projects
-          </a>
         </div>
       </div>
     </section>
