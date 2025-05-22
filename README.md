@@ -1,11 +1,11 @@
 <h1 align="center">🌐 Tiago Cenci – Portfolio</h1>
 
 <p align="center">
-  <strong>Product Owner • Junior Software Developer • UX/UI Designer</strong>
+  <strong>Product Owner • APM • UX/UI Designer</strong>
 </p>
 
 <p align="center">
-  <a href="https://tiago.vercel.app" target="_blank">
+  <a href="https://tiago-cenci-portfolio.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/Visit%20Portfolio-Online-00c7b7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
   </a>
   <a href="https://www.linkedin.com/in/tiago-cenci-218962223/" target="_blank">
@@ -34,7 +34,7 @@ This is my personal portfolio, built to showcase my skills across **product mana
 ## 📷 Preview
 
 <p align="center">
-  <img src="https://your-preview-url.com" alt="Portfolio Preview" width="100%"/>
+  <img src="https://imgur.com/a/llXwxHM" alt="Portfolio Preview" width="100%"/>
 </p>
 
 ---
