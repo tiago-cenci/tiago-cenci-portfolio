@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+<h1 align="center">🌐 Tiago Cenci – Portfolio</h1>
 
-## Project info
+<p align="center">
+  <strong>Product Owner • Junior Software Developer • UX/UI Designer</strong>
+</p>
 
-**URL**: https://lovable.dev/projects/2747cae8-1506-41fa-952c-ff18a47f9ef3
+<p align="center">
+  <a href="https://tiago.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/Visit%20Portfolio-Online-00c7b7?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio"/>
+  </a>
+  <a href="https://www.linkedin.com/in/tiago-cenci-218962223/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Tiago%20Cenci-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  </a>
+  <a href="https://github.com/cenci-ntido" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-tiagocenci-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 About the Project
 
-**Use Lovable**
+This is my personal portfolio, built to showcase my skills across **product management**, **software development**, and **UX/UI design**.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2747cae8-1506-41fa-952c-ff18a47f9ef3) and start prompting.
+> 🔥 Built with performance, dark mode, animations and a tech-inspired layout.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 📷 Preview
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+<p align="center">
+  <img src="https://your-preview-url.com" alt="Portfolio Preview" width="100%"/>
+</p>
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📦 Local Setup
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+To run the project locally:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+# Clone this repository
+git clone https://github.com/tiagocenci/your-portfolio-repo.git
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Enter the project directory
+cd your-portfolio-repo
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+
+# Run the dev server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2747cae8-1506-41fa-952c-ff18a47f9ef3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

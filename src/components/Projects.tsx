@@ -61,10 +61,10 @@ const uxProjects = [
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'dev' | 'ux'>('all');
-  
+
   // Get projects based on filter
   const getFilteredProjects = () => {
-    switch(activeFilter) {
+    switch (activeFilter) {
       case 'dev':
         return devProjects;
       case 'ux':
@@ -78,46 +78,43 @@ const Projects = () => {
     <section id="projects" className="py-20 md:py-32 relative">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">My Projects</h2>
           <p className="text-foreground/70 mb-8">
-            A collection of development and UX/UI design work that showcases my skills and expertise
+            A selection of development and design case studies showcasing my skills across product, code, and UX/UI.
           </p>
-          
+
           {/* Filter buttons */}
           <div className="flex flex-wrap justify-center gap-3 mb-8">
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
-                activeFilter === 'all'
+              className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'all'
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-foreground/70 hover:text-foreground"
-              }`}
+                }`}
               onClick={() => setActiveFilter('all')}
             >
               All Projects
             </button>
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
-                activeFilter === 'dev'
+              className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'dev'
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-foreground/70 hover:text-foreground"
-              }`}
+                }`}
               onClick={() => setActiveFilter('dev')}
             >
               Development
             </button>
             <button
-              className={`px-4 py-2 rounded-md transition-colors ${
-                activeFilter === 'ux'
+              className={`px-4 py-2 rounded-md transition-colors ${activeFilter === 'ux'
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-foreground/70 hover:text-foreground"
-              }`}
+                }`}
               onClick={() => setActiveFilter('ux')}
             >
               UX/UI Design
             </button>
           </div>
         </div>
-        
+
         {/* Projects grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {getFilteredProjects().map((project, index) => (
@@ -134,7 +131,7 @@ const Projects = () => {
             />
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
           <a
             href="https://github.com"
