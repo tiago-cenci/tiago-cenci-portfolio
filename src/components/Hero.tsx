@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const roles = ["Full Stack Developer", "UI/UX Designer", "Problem Solver"];
+  const roles = ["Product Manager", "Agile Leader", "Tech Enthusiast"];
 
   useEffect(() => {
     setIsVisible(true);
@@ -40,7 +40,7 @@ const Hero = () => {
             )}
           >
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4">
-              Jane Doe
+              Tiago Cenci
             </h2>
           </div>
           
@@ -64,9 +64,9 @@ const Hero = () => {
             )}
           >
             <p className="text-lg text-foreground/80 mb-8">
-              I build exceptional digital experiences with a focus on both front-end
-              aesthetics and back-end functionality. Specializing in creating
-              applications that are not only functional but also intuitive and engaging.
+              I specialize in product management, agile leadership, and technical implementation. 
+              With expertise in roadmap planning, backlog management, discovery, and delivery, 
+              I build exceptional digital experiences and lead teams to success.
             </p>
           </div>
           

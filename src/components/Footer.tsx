@@ -9,8 +9,8 @@ const Footer = () => {
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <div className="text-xl font-bold font-mono text-primary">Jane Doe</div>
-            <p className="text-sm text-foreground/60 mt-1">Developer & UX Designer</p>
+            <div className="text-xl font-bold font-mono text-primary">Tiago Cenci</div>
+            <p className="text-sm text-foreground/60 mt-1">Product Manager & Tech Enthusiast</p>
           </div>
           
           <div className="flex flex-col items-center md:items-end">
@@ -24,7 +24,7 @@ const Footer = () => {
                 GitHub
               </a>
               <a 
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/tiago-cenci-218962223/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
@@ -32,24 +32,16 @@ const Footer = () => {
                 LinkedIn
               </a>
               <a 
-                href="https://twitter.com"
+                href="https://linktr.ee/tiago_cenci"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground/60 hover:text-primary transition-colors"
               >
-                Twitter
-              </a>
-              <a 
-                href="https://dribbble.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/60 hover:text-primary transition-colors"
-              >
-                Dribbble
+                LinkTree
               </a>
             </div>
             <p className="text-sm text-foreground/40">
-              © {currentYear} Jane Doe. All rights reserved.
+              © {currentYear} Tiago Cenci. All rights reserved.
             </p>
           </div>
         </div>

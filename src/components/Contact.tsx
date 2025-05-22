@@ -1,45 +1,9 @@
 
-import React, { useState } from "react";
+import React from "react";
 import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin, Linkedin, Link } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission delay
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thanks for reaching out. I'll get back to you soon.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-      setIsSubmitting(false);
-    }, 1500);
-  };
-
   return (
     <section id="contact" className="py-20 md:py-32 relative">
       <div className="container px-4 md:px-6 relative z-10">
@@ -48,154 +12,83 @@ const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-foreground/70 mb-8">
-            Have a project in mind or want to discuss potential opportunities? Drop me a message!
+            Feel free to reach out to me through any of these channels!
           </p>
         </div>
 
         <div className="max-w-2xl mx-auto">
           <div className="bg-card rounded-xl shadow-xl p-6 md:p-8 border border-border backdrop-blur-sm">
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="space-y-6">
+              <div className="flex flex-col items-center text-center space-y-4">
+                <h3 className="text-xl font-bold">Tiago Cenci</h3>
+                <p className="text-foreground/70">Pato Branco – PR (Brazil)</p>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-foreground/80 mb-1"
+                <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/30 border border-border">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Phone className="h-4 w-4 text-primary" />
+                    <span className="font-medium">Phone</span>
+                  </div>
+                  <a 
+                    href="tel:+5546991300469" 
+                    className="text-foreground/70 hover:text-primary transition-colors"
                   >
-                    Name
-                  </label>
-                  <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={cn(
-                      "block w-full rounded-md border border-input",
-                      "bg-background/50 backdrop-blur-sm px-4 py-2",
-                      "text-sm text-foreground placeholder:text-muted-foreground",
-                      "focus:outline-none focus:ring-1 focus:ring-primary"
-                    )}
-                    placeholder="Your name"
-                  />
+                    +55 (46) 99130-0469
+                  </a>
                 </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-foreground/80 mb-1"
+                
+                <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/30 border border-border">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Mail className="h-4 w-4 text-primary" />
+                    <span className="font-medium">Email</span>
+                  </div>
+                  <a 
+                    href="mailto:tiagocenci100@gmail.com" 
+                    className="text-foreground/70 hover:text-primary transition-colors"
                   >
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={cn(
-                      "block w-full rounded-md border border-input",
-                      "bg-background/50 backdrop-blur-sm px-4 py-2",
-                      "text-sm text-foreground placeholder:text-muted-foreground",
-                      "focus:outline-none focus:ring-1 focus:ring-primary"
-                    )}
-                    placeholder="your.email@example.com"
-                  />
+                    tiagocenci100@gmail.com
+                  </a>
+                </div>
+                
+                <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/30 border border-border">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <MapPin className="h-4 w-4 text-primary" />
+                    <span className="font-medium">Location</span>
+                  </div>
+                  <span className="text-foreground/70">
+                    Pato Branco – PR (Brazil)
+                  </span>
+                </div>
+                
+                <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/30 border border-border">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <Linkedin className="h-4 w-4 text-primary" />
+                    <span className="font-medium">LinkedIn</span>
+                  </div>
+                  <a 
+                    href="https://www.linkedin.com/in/tiago-cenci-218962223/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground/70 hover:text-primary transition-colors"
+                  >
+                    Tiago Cenci
+                  </a>
                 </div>
               </div>
-
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-sm font-medium text-foreground/80 mb-1"
-                >
-                  Subject
-                </label>
-                <input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  required
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className={cn(
-                    "block w-full rounded-md border border-input",
-                    "bg-background/50 backdrop-blur-sm px-4 py-2",
-                    "text-sm text-foreground placeholder:text-muted-foreground",
-                    "focus:outline-none focus:ring-1 focus:ring-primary"
-                  )}
-                  placeholder="What is this regarding?"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-foreground/80 mb-1"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  className={cn(
-                    "block w-full rounded-md border border-input",
-                    "bg-background/50 backdrop-blur-sm px-4 py-2",
-                    "text-sm text-foreground placeholder:text-muted-foreground",
-                    "focus:outline-none focus:ring-1 focus:ring-primary",
-                    "resize-none"
-                  )}
-                  placeholder="Your message here..."
-                />
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={cn(
-                    "w-full inline-flex justify-center items-center rounded-md",
-                    "bg-primary px-4 py-2.5 text-sm font-medium text-primary-foreground",
-                    "shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-1",
-                    "focus:ring-primary transition-colors",
-                    isSubmitting && "opacity-70 cursor-not-allowed"
-                  )}
-                >
-                  {isSubmitting ? "Sending..." : "Send Message"}
-                </button>
-              </div>
-            </form>
-
-            <div className="mt-8 pt-6 border-t border-border">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                <a
-                  href="mailto:hello@example.com"
-                  className="text-primary hover:text-primary/90 transition-colors"
-                >
-                  <div className="font-medium">Email</div>
-                  <div className="text-sm text-foreground/70">hello@example.com</div>
-                </a>
-                <a
-                  href="https://linkedin.com"
+              
+              <div className="flex flex-col items-center p-4 rounded-lg bg-secondary/30 border border-border">
+                <div className="flex items-center space-x-2 mb-2">
+                  <Link className="h-4 w-4 text-primary" />
+                  <span className="font-medium">All Links</span>
+                </div>
+                <a 
+                  href="https://linktr.ee/tiago_cenci" 
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/90 transition-colors"
+                  className="text-foreground/70 hover:text-primary transition-colors"
                 >
-                  <div className="font-medium">LinkedIn</div>
-                  <div className="text-sm text-foreground/70">@yourprofile</div>
-                </a>
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/90 transition-colors"
-                >
-                  <div className="font-medium">GitHub</div>
-                  <div className="text-sm text-foreground/70">@yourhandle</div>
+                  linktr.ee/tiago_cenci
                 </a>
               </div>
             </div>

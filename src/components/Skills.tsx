@@ -9,20 +9,20 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: "Frontend",
-    skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "HTML/CSS", "JavaScript", "Redux", "Framer Motion"]
+    title: "Product",
+    skills: ["Product Management", "Roadmap Planning", "Backlog Management", "Discovery", "Delivery", "Team Leadership", "OKRs", "KPIs", "Data-Driven"]
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"]
+    title: "Agile",
+    skills: ["Scrum", "Kanban", "Jira", "Confluence", "Agile Leadership", "Team Management"]
   },
   {
-    title: "Tools & Methods",
-    skills: ["Git", "Docker", "CI/CD", "AWS", "Jest", "Agile", "Figma", "Adobe XD"]
+    title: "Technical",
+    skills: ["SQL", "API", "Oracle", "MySQL", "ERPs", "BPMN", "Bizagi", "B2B", "Artificial Intelligence", "LLM", "Agriculture"]
   },
   {
-    title: "UX/UI Design",
-    skills: ["User Research", "Wireframing", "Prototyping", "Usability Testing", "Design Systems", "Visual Design", "Information Architecture"]
+    title: "Development",
+    skills: ["Java Spring", "Angular", "React", "Next.js", "Figma"]
   }
 ];
 
@@ -35,7 +35,7 @@ const Skills = () => {
         <div className="max-w-3xl mx-auto mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Technical Skills</h2>
           <p className="text-foreground/70 mb-8">
-            The technologies and methodologies I work with to bring projects to life
+            The technologies and methodologies I work with to deliver successful products
           </p>
           
           {/* Skill category tabs */}
