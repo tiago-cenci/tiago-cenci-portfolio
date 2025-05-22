@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -84,12 +85,89 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { 
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+				},
+				'fade-out': {
+					'0%': { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					},
+					'100%': { 
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+				},
+				'pulse-glow': {
+					'0%, 100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': {
+						opacity: '0.8',
+						transform: 'scale(1.03)'
+					},
+				},
+				'typing': {
+					'0%': {
+						width: '0%'
+					},
+					'100%': {
+						width: '100%'
+					}
+				},
+				'blink': {
+					'0%, 100%': {
+						borderColor: 'transparent'
+					},
+					'50%': {
+						borderColor: 'hsl(var(--primary))'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'particle-move': {
+					'0%': {
+						transform: 'translateX(0) translateY(0)'
+					},
+					'50%': {
+						transform: 'translateX(15px) translateY(-15px)'
+					},
+					'100%': {
+						transform: 'translateX(0) translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'fade-in-slow': 'fade-in 0.8s ease-out forwards',
+				'fade-out': 'fade-out 0.5s ease-out forwards',
+				'pulse-glow': 'pulse-glow 3s infinite',
+				'typing': 'typing 3.5s steps(40, end)',
+				'blink': 'blink 0.7s step-end infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'particle-move': 'particle-move 8s ease-in-out infinite',
+			},
+			fontFamily: {
+				'mono': ['JetBrains Mono', 'monospace'],
+				'sans': ['Inter', 'sans-serif'],
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
