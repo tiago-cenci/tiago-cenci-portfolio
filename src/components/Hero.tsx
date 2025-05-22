@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const roles = ["Product Manager", "Agile Leader", "Tech Enthusiast"];
+  const roles = ["Product Owner", "APM", "Junior Software Developer", "UX/UI Designer"];
 
   useEffect(() => {
     setIsVisible(true);

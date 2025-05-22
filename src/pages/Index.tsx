@@ -10,8 +10,7 @@ import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
   useEffect(() => {
-    // Update title
-    document.title = "Tiago Cenci | Product Manager Portfolio";
+    document.title = "Tiago Cenci Portfolio";
   }, []);
 
   return (
