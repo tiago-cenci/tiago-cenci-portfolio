@@ -77,14 +77,15 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/public\Tiago_Cenci_CV_English (1).pdf"
+            download="Tiago_Cenci_CV_English (1).pdf"
             className="inline-flex items-center justify-center h-9 px-4 rounded-md bg-primary text-primary-foreground text-sm font-medium transition-colors hover:bg-primary/90"
           >
             Resume
           </a>
         </div>
+
+
 
         {/* Mobile Menu Button */}
         <button
@@ -144,9 +145,8 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/public\Tiago_Cenci_CV_English (1).pdf"
+            download="Tiago_Cenci_CV_English (1).pdf"
             className="inline-flex items-center justify-center h-12 rounded-md bg-primary text-primary-foreground text-base font-medium transition-colors hover:bg-primary/90 mt-4"
           >
             Resume

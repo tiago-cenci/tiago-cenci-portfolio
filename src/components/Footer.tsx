@@ -8,11 +8,13 @@ const Footer = () => {
     <footer className="py-10 border-t border-border bg-background relative z-10">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <div className="text-xl font-bold font-mono text-primary">Tiago Cenci</div>
-            <p className="text-sm text-foreground/60 mt-1">Product vision focused on the user.</p>
+          <div className="flex items-center gap-3 mb-4 md:mb-0">
+            <img src="/favicon.ico" alt="sign" />
+            <div>
+              <div className="text-xl font-bold font-mono text-primary">Tiago Cenci</div>
+              <p className="text-sm text-foreground/60 mt-1">Product vision focused on the user.</p>
+            </div>
           </div>
-
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
               <a
