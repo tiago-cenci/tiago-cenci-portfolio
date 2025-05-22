@@ -9,12 +9,12 @@ const Hero = () => {
 
   useEffect(() => {
     setIsVisible(true);
-    
+
     // Rotate through tech phrases
     const interval = setInterval(() => {
       setCurrentPhraseIndex((prev) => (prev + 1) % roles.length);
     }, 3000);
-    
+
     return () => clearInterval(interval);
   }, []);
 
@@ -22,6 +22,18 @@ const Hero = () => {
     <section id="home" className="min-h-screen w-full flex flex-col justify-center relative overflow-hidden pt-16">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
+          <div
+            className={cn(
+              "opacity-0 transition-all duration-1000 delay-200 flex justify-center",
+              isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
+            )}
+          >
+            <img
+              src="/me.png"
+              alt="Tiago Cenci"
+              className="w-32 h-32 rounded-full border-2 border-primary object-cover shadow-lg mb-6"
+            />
+          </div>
           <div
             className={cn(
               "opacity-0 transition-all duration-1000 delay-150",
@@ -32,18 +44,17 @@ const Hero = () => {
               Hi there, I'm
             </h1>
           </div>
-          
           <div
             className={cn(
               "opacity-0 transition-all duration-1000 delay-300",
               isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
             )}
           >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4 p-1">
               Tiago Cenci
             </h2>
           </div>
-          
+
           <div
             className={cn(
               "opacity-0 transition-all duration-1000 delay-500",
@@ -56,7 +67,7 @@ const Hero = () => {
               </h2>
             </div>
           </div>
-          
+
           <div
             className={cn(
               "opacity-0 transition-all duration-1000 delay-700 max-w-xl",
@@ -64,12 +75,12 @@ const Hero = () => {
             )}
           >
             <p className="text-lg text-foreground/80 mb-8">
-              I specialize in product management, agile leadership, and technical implementation. 
-              With expertise in roadmap planning, backlog management, discovery, and delivery, 
-              I build exceptional digital experiences and lead teams to success.
+              I specialize in digital product management with a strong technical foundation.
+              With experience in roadmap planning, backlog management, and discovery, I collaborate closely with development teams and contribute hands-on to implementation using technologies like Java, Spring Boot, React, and SQL.
+              I build impactful products by combining strategy, design, and code.
             </p>
           </div>
-          
+
           <div
             className={cn(
               "opacity-0 transition-all duration-1000 delay-900",
@@ -89,7 +100,7 @@ const Hero = () => {
               >
                 View My Work
               </a>
-              
+
               <a
                 href="#contact"
                 className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
@@ -105,7 +116,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        
+
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-75 animate-bounce">
           <div className="w-8 h-12 rounded-full border-2 border-foreground/20 flex justify-center pt-2">
@@ -113,10 +124,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Grid background */}
       <div className="absolute inset-0 grid-bg opacity-10"></div>
-      
+
       {/* Accent shape */}
       <div className="absolute -top-24 -right-24 w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/20 rounded-full filter blur-3xl opacity-20"></div>
