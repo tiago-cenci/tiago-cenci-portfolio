@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { devProjects, uxProjects } from "./Projects";
+import Layout from "@/Layout";
 
 type Project = {
     id: number;
@@ -8,11 +9,8 @@ type Project = {
     description: string;
     tags: string[];
     image: string;
-    link?: string;
     isUXProject: boolean;
     longDescription?: string;
-    demoLink?: string;
-    githubLink?: string;
 };
 
 const allProjects: Project[] = [...uxProjects, ...devProjects];
@@ -21,53 +19,60 @@ const ProjectPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const projectId = Number(id);
 
-    if (!projectId) {
-        return <Navigate to="/projects" />; // Redireciona se id inválido
-    }
+    if (!projectId) return <Navigate to="/" />;
 
     const project = allProjects.find((p) => p.id === projectId);
-
-    if (!project) {
-        return <div>Projeto não encontrado.</div>;
-    }
+    if (!project) return <div>Projeto não encontrado.</div>;
 
     return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">{project.title}</h1>
-            <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                    <span key={tag} className="bg-gray-200 rounded px-2 py-1 text-sm">
-                        {tag}
-                    </span>
-                ))}
-            </div>
-            <img
-                src={project.image}
-                alt={project.title}
-                className="w-full max-w-xl rounded mb-6"
-            />
-            <p className="mb-6">{project.longDescription || project.description}</p>
-            <div className="flex gap-4">
-                {project.demoLink && (
-                    <a
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 py-2 bg-blue-600 text-white rounded"
-                    >
-                        Live Demo
-                    </a>
-                )}
-                <a
-                    href={project.githubLink || project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 text-white rounded"
-                >
-                    {project.isUXProject ? "Case Study" : "GitHub"}
-                </a>
-            </div>
-        </div>
+        <Layout>
+            <section className="min-h-screen w-full flex flex-col justify-center relative overflow-hidden pt-16">
+                <div className="container px-4 md:px-6 relative z-10">
+                    <div className="max-w-6xl mx-auto">
+                        {/* Conteúdo do projeto */}
+                        <div className="flex-1 text-center md:text-left">
+                            {/* Tags */}
+                            <div className="flex flex-wrap gap-2 justify-center md:justify-start mt-4  mb-5">
+                                {project.tags.map((tag) => (
+                                    <span
+                                        key={tag}
+                                        className="bg-secondary/50 text-foreground text-sm px-3 py-1 rounded-full"
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+
+                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4 pb-2">
+                                {project.title}
+                            </h2>
+
+                            <p className="text-lg text-foreground/80 mb-4">
+                                {project.description}
+                            </p>
+
+                            {project.longDescription && (
+                                <p className="text-base text-foreground/70 mb-6">
+                                    {project.longDescription}
+                                </p>
+                            )}
+
+                            <img
+                                src={project.image}
+                                alt={project.title}
+                                className=" object-cover rounded-xl shadow-lg"
+                            />
+
+
+                        </div>
+                    </div>
+
+                    {/* efeitos visuais */}
+                    <div className="absolute -top-24 -right-24 w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-30"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/20 rounded-full filter blur-3xl opacity-20"></div>
+                </div>
+            </section>
+        </Layout>
     );
 };
 

@@ -43,8 +43,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <div className="absolute inset-0 bg-background/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <a
               href={`/projects/${id}`}
-              // target="_blank"
-              // rel="noopener noreferrer"
               className="px-4 py-2 bg-secondary text-foreground rounded-md font-medium text-sm transition-colors hover:bg-secondary/80"
             >
               Learn more

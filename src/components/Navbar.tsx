@@ -49,7 +49,7 @@ const Navbar = () => {
       )}
     >
       <nav className="container flex items-center justify-between">
-        <a href="#home" className="text-2xl font-bold font-mono text-primary">
+        <a href="/" className="text-2xl font-bold font-mono text-primary">
           Portfolio
           <span className="inline-block animate-blink ml-1 border-r-2 border-primary h-6 align-middle"></span>
         </a>
