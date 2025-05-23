@@ -1,26 +1,23 @@
 
 import React from "react";
-import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
+  id: number;
   title: string;
   description: string;
   tags: string[];
   image: string;
-  githubLink: string;
-  demoLink?: string | null;
   index: number;
   isUXProject?: boolean;
   onViewDetails: () => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
   title,
   description,
   tags,
   image,
-  githubLink,
-  demoLink,
   index,
   isUXProject = false,
   onViewDetails
@@ -44,24 +41,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
           {/* Hover overlay with buttons */}
           <div className="absolute inset-0 bg-background/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {demoLink && (
-              <a
-                href={demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-2 bg-primary text-primary-foreground rounded-md font-medium text-sm transition-colors hover:bg-primary/90"
-              >
-                Live Demo
-              </a>
-            )}
-
             <a
-              href={githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/projects/${id}`}
+              // target="_blank"
+              // rel="noopener noreferrer"
               className="px-4 py-2 bg-secondary text-foreground rounded-md font-medium text-sm transition-colors hover:bg-secondary/80"
             >
-              {isUXProject ? "Case Study" : "GitHub"}
+              Learn more
             </a>
           </div>
 
@@ -99,14 +85,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </span>
             )}
           </div>
-
-          {/* View Details Button */}
-          <button
-            onClick={onViewDetails}
-            className="w-full text-sm px-4 py-2 bg-secondary/30 hover:bg-secondary/50 text-foreground rounded-md font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] border border-transparent hover:border-teal-500"
-          >
-            View Details
-          </button>
         </div>
       </div>
     </div>

@@ -4,31 +4,26 @@ import ProjectCard from "./ProjectCard";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 //  project data
-const devProjects = [
+export const devProjects = [
   {
     id: 9,
     title: "Text to SQL - NLP",
     description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
     tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
     image: "https://i.imgur.com/z9WCoV6.png",
-    githubLink: "https://github.com",
-    demoLink: null,
     isUXProject: false,
     longDescription: "This research project explores the capabilities of Natural Language Processing (NLP) in converting human language into SQL queries. By analyzing various pre-trained models including GPT-4o and Gemini 2.0-flash, the study compares accuracy, response time, and query complexity across different database management systems. The results demonstrate significant advancements in NLP interfaces for database interaction, potentially making database querying more accessible to non-technical users."
   }
 ];
 
-const uxProjects = [
+export const uxProjects = [
   {
     id: 1,
-    title: "Filt IA+",
-    description: "Based on a real project, made on voluntary work ",
-    tags: ["User Research", "Information Architecture", "Visual Design"],
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
-    githubLink: "https://behance.net",
-    demoLink: null,
+    title: "Filt - AI Integration in Agribusiness ERP",
+    description: "Led the design, discovery, and delivery of an AI-powered assistant in a niche ERP for agribusiness. Delivered in 1 month with a cross-functional team of 20+ professionals.",
+    tags: ["Product Management", "Agile", "Discovery", "Delivery", "A/B test"],
+    image: "https://i.imgur.com/O8GkicE.jpeg",
     isUXProject: true,
-    longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
   },
   {
     id: 2,
@@ -36,10 +31,7 @@ const uxProjects = [
     description: "Based on a real project, made on voluntary work ",
     tags: ["User Research", "Information Architecture", "Visual Design"],
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
-    githubLink: "https://behance.net",
-    demoLink: null,
     isUXProject: true,
-    longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
   },
   {
     id: 3,
@@ -47,10 +39,7 @@ const uxProjects = [
     description: "Based on a real project, made on voluntary work ",
     tags: ["User Research", "Information Architecture", "Visual Design"],
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
-    githubLink: "https://behance.net",
-    demoLink: null,
     isUXProject: true,
-    longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
   },
   {
     id: 4,
@@ -58,10 +47,7 @@ const uxProjects = [
     description: "A fictional case study to demonstrate my knowledge of product discovery, MVP definition, backlog prioritization, technical specification, launch, and monitoring.",
     tags: ["Discovery", "Wireframing", "Delivery", "Management"],
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
-    githubLink: "https://behance.net",
-    demoLink: null,
     isUXProject: true,
-    longDescription: "This case study demonstrates a comprehensive product development process for a law firm activity management application. Starting with user research to identify pain points in legal workflow management, the project proceeded through discovery phases to establish core requirements. The MVP was defined with focus on calendar integration, case tracking, and time recording features. The design process involved multiple iterations of wireframing and prototyping, with usability testing conducted with actual law professionals. The final implementation plan included technical specifications, resource allocation, and a phased rollout strategy."
   }
 ];
 
@@ -79,7 +65,7 @@ const Projects = () => {
       case 'dev':
         return devProjects;
       default:
-        return [...devProjects, ...uxProjects];
+        return [...uxProjects, ...devProjects];
     }
   };
 
@@ -157,13 +143,11 @@ const Projects = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {getFilteredProjects().map((project, index) => (
             <ProjectCard
-              key={project.id}
+              id={project.id}
               title={project.title}
               description={project.description}
               tags={project.tags}
               image={project.image}
-              githubLink={project.githubLink}
-              demoLink={project.demoLink}
               index={index}
               isUXProject={project.isUXProject}
               onViewDetails={() => handleOpenProjectDetails(project)}
