@@ -87,21 +87,21 @@ export default {
 					}
 				},
 				'fade-in': {
-					'0%': { 
+					'0%': {
 						opacity: '0',
 						transform: 'translateY(10px)'
 					},
-					'100%': { 
+					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					},
 				},
 				'fade-out': {
-					'0%': { 
+					'0%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					},
-					'100%': { 
+					'100%': {
 						opacity: '0',
 						transform: 'translateY(10px)'
 					},

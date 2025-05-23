@@ -28,87 +28,101 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen w-full flex flex-col justify-center relative overflow-hidden pt-16">
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
+          {/* Texto à esquerda */}
+          <div className="flex-1 text-center md:text-left">
+            <div
+              className={cn(
+                "opacity-0 transition-all duration-1000 delay-150",
+                isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
+              )}
+            >
+              <h1 className="font-mono font-bold opacity-80 mb-1">
+                Hi there, I'm
+              </h1>
+            </div>
+
+            <div
+              className={cn(
+                "opacity-0 transition-all duration-1000 delay-300",
+                isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
+              )}
+            >
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4 pb-2">
+                Tiago Cenci
+              </h2>
+            </div>
+
+            <div
+              className={cn(
+                "opacity-0 transition-all duration-1000 delay-500",
+                isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
+              )}
+            >
+              <div className="h-8 md:h-10 mb-6">
+                <h2 className="text-xl md:text-2xl font-semibold font-mono text-foreground/90 inline-block">
+                  &lt;{roles[currentPhraseIndex]}/&gt;
+                </h2>
+              </div>
+            </div>
+
+            <div
+              className={cn(
+                "opacity-0 transition-all duration-1000 delay-700 max-w-xl",
+                isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
+              )}
+            >
+              <p className="text-lg text-foreground/80 mb-8">
+                I specialize in digital product management with a strong technical foundation.
+                With experience in roadmap planning, backlog management, and discovery, I collaborate closely with development teams and contribute hands-on to implementation using technologies like Java, Spring Boot, React, and SQL.
+                I build impactful products by combining strategy, design, and code.
+              </p>
+            </div>
+
+            <div
+              className={cn(
+                "opacity-0 transition-all duration-1000 delay-900",
+                isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
+              )}
+            >
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <a
+                  href="#projects"
+                  className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  View My Work
+                </a>
+
+                <a
+                  href="#contact"
+                  className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Imagem à direita (visível em md+) */}
           <div
             className={cn(
-              "opacity-0 transition-all duration-1000 delay-200 flex justify-center",
+              "opacity-0 transition-all duration-1000 delay-200 hidden md:block",
               isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
             )}
           >
             <img
               src="/me.png"
               alt="Tiago Cenci"
-              className="w-32 h-32 rounded-full border-2 border-primary object-cover shadow-lg mb-6"
+              className="w-60 h-60 rounded-full border-2 border-cyan-500 object-cover shadow-lg"
             />
-          </div>
-          <div
-            className={cn(
-              "opacity-0 transition-all duration-1000 delay-150",
-              isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
-            )}
-          >
-            <h1 className="font-mono font-bold opacity-80 mb-1">
-              Hi there, I'm
-            </h1>
-          </div>
-          <div
-            className={cn(
-              "opacity-0 transition-all duration-1000 delay-300",
-              isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
-            )}
-          >
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text mb-4 p-1">
-              Tiago Cenci
-            </h2>
-          </div>
-
-          <div
-            className={cn(
-              "opacity-0 transition-all duration-1000 delay-500",
-              isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
-            )}
-          >
-            <div className="h-8 md:h-10 mb-6">
-              <h2 className="text-xl md:text-2xl font-semibold font-mono text-foreground/90 inline-block">
-                &lt;{roles[currentPhraseIndex]}/&gt;
-              </h2>
-            </div>
-          </div>
-
-          <div
-            className={cn(
-              "opacity-0 transition-all duration-1000 delay-700 max-w-xl",
-              isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
-            )}
-          >
-            <p className="text-lg text-foreground/80 mb-8">
-              I specialize in digital product management with a strong technical foundation.
-              With experience in roadmap planning, backlog management, and discovery, I collaborate closely with development teams and contribute hands-on to implementation using technologies like Java, Spring Boot, React, and SQL.
-              I build impactful products by combining strategy, design, and code.
-            </p>
-          </div>
-
-          <div
-            className={cn(
-              "opacity-0 transition-all duration-1000 delay-900",
-              isVisible ? "opacity-100 translate-y-0" : "translate-y-8"
-            )}
-          >
-            <div className="flex flex-wrap gap-4">
-              <button
-                onClick={() => scrollToSection("#projects")}
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-all duration-200 hover:bg-primary/90 hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
-                View My Work
-              </button>
-
-              <button
-                onClick={() => scrollToSection("#contact")}
-                className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium text-primary shadow-sm transition-all duration-200 hover:bg-primary/10 hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-              >
-                Contact Me
-              </button>
-            </div>
           </div>
         </div>
 
@@ -123,7 +137,7 @@ const Hero = () => {
       {/* Grid background */}
       <div className="absolute inset-0 grid-bg opacity-10"></div>
 
-      {/* Accent shape */}
+      {/* Accent shapes */}
       <div className="absolute -top-24 -right-24 w-80 h-80 bg-primary/20 rounded-full filter blur-3xl opacity-30"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/20 rounded-full filter blur-3xl opacity-20"></div>
     </section>

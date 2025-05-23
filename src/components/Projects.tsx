@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 //  project data
 const devProjects = [
   {
-    id: 3,
+    id: 9,
     title: "Text to SQL - NLP",
     description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
     tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
@@ -20,26 +20,48 @@ const devProjects = [
 
 const uxProjects = [
   {
-    id: 2,
-    title: "Activity Management App for Law Firms [PTBR]",
-    description: "A fictional case study to demonstrate my knowledge of product discovery, MVP definition, backlog prioritization, technical specification, launch, and monitoring.",
-    tags: ["UX Research", "Wireframing", "Prototyping", "Usability Testing"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
-    githubLink: "https://behance.net",
-    demoLink: null,
-    isUXProject: true,
-    longDescription: "This case study demonstrates a comprehensive product development process for a law firm activity management application. Starting with user research to identify pain points in legal workflow management, the project proceeded through discovery phases to establish core requirements. The MVP was defined with focus on calendar integration, case tracking, and time recording features. The design process involved multiple iterations of wireframing and prototyping, with usability testing conducted with actual law professionals. The final implementation plan included technical specifications, resource allocation, and a phased rollout strategy."
-  },
-  {
     id: 1,
-    title: "Smart Home Concept",
-    description: "Complete design process for a smart home control app, focusing on intuitive interactions and visual hierarchy.",
+    title: "Filt IA+",
+    description: "Based on a real project, made on voluntary work ",
     tags: ["User Research", "Information Architecture", "Visual Design"],
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
     githubLink: "https://behance.net",
     demoLink: null,
     isUXProject: true,
     longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
+  },
+  {
+    id: 2,
+    title: "LavandCenter",
+    description: "Based on a real project, made on voluntary work ",
+    tags: ["User Research", "Information Architecture", "Visual Design"],
+    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
+    githubLink: "https://behance.net",
+    demoLink: null,
+    isUXProject: true,
+    longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
+  },
+  {
+    id: 3,
+    title: "GAMA",
+    description: "Based on a real project, made on voluntary work ",
+    tags: ["User Research", "Information Architecture", "Visual Design"],
+    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
+    githubLink: "https://behance.net",
+    demoLink: null,
+    isUXProject: true,
+    longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
+  },
+  {
+    id: 4,
+    title: "Activity Management App for Law Firms",
+    description: "A fictional case study to demonstrate my knowledge of product discovery, MVP definition, backlog prioritization, technical specification, launch, and monitoring.",
+    tags: ["Discovery", "Wireframing", "Delivery", "Management"],
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
+    githubLink: "https://behance.net",
+    demoLink: null,
+    isUXProject: true,
+    longDescription: "This case study demonstrates a comprehensive product development process for a law firm activity management application. Starting with user research to identify pain points in legal workflow management, the project proceeded through discovery phases to establish core requirements. The MVP was defined with focus on calendar integration, case tracking, and time recording features. The design process involved multiple iterations of wireframing and prototyping, with usability testing conducted with actual law professionals. The final implementation plan included technical specifications, resource allocation, and a phased rollout strategy."
   }
 ];
 
@@ -60,7 +82,7 @@ const Projects = () => {
         return [...devProjects, ...uxProjects];
     }
   };
-  
+
   // Handle opening project details modal
   const handleOpenProjectDetails = (project: any) => {
     setSelectedProject(project);
@@ -152,26 +174,12 @@ const Projects = () => {
 
       {/* Project Details Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="sm:max-w-[600px]">
+        <DialogContent className="w-full max-w-[90vw] max-h-[90vh] overflow-auto p-4">
           {selectedProject && (
             <>
               <DialogHeader>
                 <DialogTitle>{selectedProject.title}</DialogTitle>
                 <DialogDescription>
-                  {selectedProject.tags.join(" • ")}
-                </DialogDescription>
-              </DialogHeader>
-              
-              <div className="mt-4">
-                <img 
-                  src={selectedProject.image} 
-                  alt={selectedProject.title} 
-                  className="w-full h-auto rounded-md mb-4 object-cover"
-                />
-                
-                <div className="space-y-4">
-                  <p className="text-foreground/90">{selectedProject.longDescription}</p>
-                  
                   <div className="flex flex-wrap gap-2 mt-4">
                     {selectedProject.tags.map((tag: string) => (
                       <span
@@ -182,7 +190,20 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  
+                </DialogDescription>
+              </DialogHeader>
+
+              <div className="mt-4">
+                <img
+                  src={selectedProject.image}
+                  alt={selectedProject.title}
+                  className="w-full h-auto rounded-md mb-4 object-cover"
+                />
+
+                <div className="space-y-4">
+                  <p className="text-foreground/90">{selectedProject.longDescription}</p>
+
+
                   <div className="flex gap-4 mt-6">
                     {selectedProject.demoLink && (
                       <a
@@ -194,7 +215,7 @@ const Projects = () => {
                         Live Demo
                       </a>
                     )}
-                    
+
                     <a
                       href={selectedProject.githubLink}
                       target="_blank"

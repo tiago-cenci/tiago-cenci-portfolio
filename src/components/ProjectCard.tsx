@@ -103,7 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* View Details Button */}
           <button
             onClick={onViewDetails}
-            className="w-full text-sm px-4 py-2 bg-secondary/30 hover:bg-secondary/50 text-foreground rounded-md font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full text-sm px-4 py-2 bg-secondary/30 hover:bg-secondary/50 text-foreground rounded-md font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] border border-transparent hover:border-teal-500"
           >
             View Details
           </button>
