@@ -1,6 +1,7 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 //  project data
 const devProjects = [
@@ -12,7 +13,8 @@ const devProjects = [
     image: "https://i.imgur.com/z9WCoV6.png",
     githubLink: "https://github.com",
     demoLink: null,
-    isUXProject: false
+    isUXProject: false,
+    longDescription: "This research project explores the capabilities of Natural Language Processing (NLP) in converting human language into SQL queries. By analyzing various pre-trained models including GPT-4o and Gemini 2.0-flash, the study compares accuracy, response time, and query complexity across different database management systems. The results demonstrate significant advancements in NLP interfaces for database interaction, potentially making database querying more accessible to non-technical users."
   }
 ];
 
@@ -24,8 +26,9 @@ const uxProjects = [
     tags: ["UX Research", "Wireframing", "Prototyping", "Usability Testing"],
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
     githubLink: "https://behance.net",
-    demoLink: null, // Adding demoLink property with null value for UX projects
-    isUXProject: true
+    demoLink: null,
+    isUXProject: true,
+    longDescription: "This case study demonstrates a comprehensive product development process for a law firm activity management application. Starting with user research to identify pain points in legal workflow management, the project proceeded through discovery phases to establish core requirements. The MVP was defined with focus on calendar integration, case tracking, and time recording features. The design process involved multiple iterations of wireframing and prototyping, with usability testing conducted with actual law professionals. The final implementation plan included technical specifications, resource allocation, and a phased rollout strategy."
   },
   {
     id: 1,
@@ -34,13 +37,17 @@ const uxProjects = [
     tags: ["User Research", "Information Architecture", "Visual Design"],
     image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
     githubLink: "https://behance.net",
-    demoLink: null, // Adding demoLink property with null value for UX projects
-    isUXProject: true
+    demoLink: null,
+    isUXProject: true,
+    longDescription: "This concept project explores the design of a unified smart home control application with emphasis on intuitive user experience. The design process began with extensive user research to understand pain points in existing smart home solutions. The information architecture was developed to provide quick access to commonly used functions while maintaining a comprehensive control system for the entire home ecosystem. The visual design focuses on clear hierarchy, with ambient visualization of home status and contextual controls that appear when needed. Prototypes were tested with various user demographics to ensure accessibility and ease of use across different technical proficiency levels."
   }
 ];
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'dev' | 'ux'>('all');
+  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [visibleItems, setVisibleItems] = useState(false);
 
   // Get projects based on filter
   const getFilteredProjects = () => {
@@ -53,11 +60,40 @@ const Projects = () => {
         return [...devProjects, ...uxProjects];
     }
   };
+  
+  // Handle opening project details modal
+  const handleOpenProjectDetails = (project: any) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  // Set up intersection observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleItems(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    const section = document.getElementById("projects");
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
 
   return (
     <section id="projects" className="py-20 md:py-32 relative">
       <div className="container px-4 md:px-6 relative z-10">
-        <div className="max-w-3xl mx-auto mb-12 text-center">
+        <div className={`max-w-3xl mx-auto mb-12 text-center transition-all duration-700 transform ${visibleItems ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">My Projects</h2>
           <p className="text-foreground/70 mb-8">
             A selection of development and design case studies showcasing my skills across product, code, and UX/UI.
@@ -108,10 +144,72 @@ const Projects = () => {
               demoLink={project.demoLink}
               index={index}
               isUXProject={project.isUXProject}
+              onViewDetails={() => handleOpenProjectDetails(project)}
             />
           ))}
         </div>
       </div>
+
+      {/* Project Details Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="sm:max-w-[600px]">
+          {selectedProject && (
+            <>
+              <DialogHeader>
+                <DialogTitle>{selectedProject.title}</DialogTitle>
+                <DialogDescription>
+                  {selectedProject.tags.join(" • ")}
+                </DialogDescription>
+              </DialogHeader>
+              
+              <div className="mt-4">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title} 
+                  className="w-full h-auto rounded-md mb-4 object-cover"
+                />
+                
+                <div className="space-y-4">
+                  <p className="text-foreground/90">{selectedProject.longDescription}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {selectedProject.tags.map((tag: string) => (
+                      <span
+                        key={tag}
+                        className="text-xs px-2 py-1 rounded-md bg-secondary/50 text-foreground/70"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex gap-4 mt-6">
+                    {selectedProject.demoLink && (
+                      <a
+                        href={selectedProject.demoLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 bg-primary text-primary-foreground rounded-md font-medium text-sm transition-colors hover:bg-primary/90"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    
+                    <a
+                      href={selectedProject.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-secondary text-foreground rounded-md font-medium text-sm transition-colors hover:bg-secondary/80"
+                    >
+                      {selectedProject.isUXProject ? "Case Study" : "GitHub"}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

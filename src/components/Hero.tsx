@@ -18,6 +18,13 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Handle smooth scrolling to sections
+  const scrollToSection = (sectionId: string) => {
+    document.querySelector(sectionId)?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section id="home" className="min-h-screen w-full flex flex-col justify-center relative overflow-hidden pt-16">
       <div className="container px-4 md:px-6 relative z-10">
@@ -88,31 +95,19 @@ const Hero = () => {
             )}
           >
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#projects"
-                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector("#projects")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
+              <button
+                onClick={() => scrollToSection("#projects")}
+                className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-all duration-200 hover:bg-primary/90 hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 View My Work
-              </a>
+              </button>
 
-              <a
-                href="#contact"
-                className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium text-primary shadow-sm transition-colors hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector("#contact")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
+              <button
+                onClick={() => scrollToSection("#contact")}
+                className="inline-flex h-10 items-center justify-center rounded-md border border-primary bg-transparent px-8 text-sm font-medium text-primary shadow-sm transition-all duration-200 hover:bg-primary/10 hover:scale-[1.03] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
               >
                 Contact Me
-              </a>
+              </button>
             </div>
           </div>
         </div>

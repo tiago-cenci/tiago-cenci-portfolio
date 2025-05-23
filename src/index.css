@@ -44,6 +44,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
   }
@@ -100,5 +104,69 @@
 
   .animated-border:hover::after {
     transform: scaleX(1);
+  }
+  
+  /* Button hover effects */
+  .btn-hover-effect {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .btn-hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.7s;
+  }
+  
+  .btn-hover-effect:hover::before {
+    left: 100%;
+  }
+  
+  /* Card hover effects */
+  .card-hover-effect {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
+  }
+  
+  /* Fade-in animation for scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Staggered animation delay helper classes */
+  .delay-100 {
+    transition-delay: 100ms;
+  }
+  
+  .delay-200 {
+    transition-delay: 200ms;
+  }
+  
+  .delay-300 {
+    transition-delay: 300ms;
+  }
+  
+  .delay-400 {
+    transition-delay: 400ms;
+  }
+  
+  .delay-500 {
+    transition-delay: 500ms;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }

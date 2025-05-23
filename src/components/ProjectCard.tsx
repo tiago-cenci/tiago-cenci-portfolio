@@ -8,9 +8,10 @@ interface ProjectCardProps {
   tags: string[];
   image: string;
   githubLink: string;
-  demoLink?: string | null; // Updated to be optional and accept null
+  demoLink?: string | null;
   index: number;
   isUXProject?: boolean;
+  onViewDetails: () => void;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -21,7 +22,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   githubLink,
   demoLink,
   index,
-  isUXProject = false
+  isUXProject = false,
+  onViewDetails
 }) => {
   // Animation delay based on index
   const animationDelay = `${index * 100 + 200}ms`;
@@ -74,8 +76,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </div>
             )
           }
-
-
         </div>
 
         {/* Project details */}
@@ -84,8 +84,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           <p className="text-sm text-foreground/70 mb-4 flex-1">{description}</p>
 
           {/* Project tags */}
-          <div className="flex flex-wrap gap-2 mt-auto">
-            {tags.map((tag) => (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {tags.slice(0, 3).map((tag) => (
               <span
                 key={tag}
                 className="text-xs px-2 py-1 rounded-md bg-secondary/50 text-foreground/70"
@@ -93,7 +93,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                 {tag}
               </span>
             ))}
+            {tags.length > 3 && (
+              <span className="text-xs px-2 py-1 rounded-md bg-secondary/50 text-foreground/70">
+                +{tags.length - 3}
+              </span>
+            )}
           </div>
+
+          {/* View Details Button */}
+          <button
+            onClick={onViewDetails}
+            className="w-full text-sm px-4 py-2 bg-secondary/30 hover:bg-secondary/50 text-foreground rounded-md font-medium transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+          >
+            View Details
+          </button>
         </div>
       </div>
     </div>
