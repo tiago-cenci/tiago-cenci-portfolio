@@ -2,6 +2,8 @@ import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { devProjects, uxProjects } from "./Projects";
 import Layout from "@/Layout";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
 
 type Project = {
     id: number;
@@ -11,6 +13,9 @@ type Project = {
     image: string;
     isUXProject: boolean;
     longDescription?: string;
+    images?: { url: string; caption: string }[];
+    buttons?: { label: string; href: string }[];
+
 };
 
 const allProjects: Project[] = [...uxProjects, ...devProjects];
@@ -19,7 +24,7 @@ const ProjectPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const projectId = Number(id);
 
-    if (!projectId) return <Navigate to="/" />;
+    if (!id || isNaN(Number(id))) return <Navigate to="/" />;
 
     const project = allProjects.find((p) => p.id === projectId);
     if (!project) return <div>Projeto não encontrado.</div>;
@@ -51,19 +56,60 @@ const ProjectPage: React.FC = () => {
                                 {project.description}
                             </p>
 
-                            {project.longDescription && (
-                                <p className="text-base text-foreground/70 mb-6">
-                                    {project.longDescription}
-                                </p>
-                            )}
-
                             <img
                                 src={project.image}
                                 alt={project.title}
                                 className=" object-cover rounded-xl shadow-lg"
                             />
+                            <div className="mt-5">
+                                {project.longDescription && (
+                                    <p className="text-base text-foreground/70 mb-10">
+                                        {project.longDescription}
+                                    </p>
+                                )}
+                            </div>
+                            <div className={`max-w-3xl mx-auto mb-4 mt-10 text-center'}`}>
+                                <h2 className="text-3xl md:text-4xl text-center font-bold gradient-text mt-10">Project images</h2>
+                            </div>
+                            {project.images && project.images.length > 0 && (
+                                <div className="mt-6 mb-6">
+                                    <Carousel className="w-full mx-auto">
+                                        <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-20" />
+                                        <CarouselContent>
+                                            {project.images.map((img, index) => (
+                                                <CarouselItem key={index} className="relative flex flex-col items-center">
+                                                    <p className="font-mono font-bold opacity-80 mb-1">{img.caption}</p>
+                                                    <img
+                                                        src={img.url}
+                                                        alt={`Slide ${index + 1}`}
+                                                        className="w-full object-cover rounded-xl shadow-md"
+                                                    />
+                                                </CarouselItem>
 
 
+                                            ))}
+                                        </CarouselContent>
+                                        <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-20" />
+                                    </Carousel>
+                                </div>
+                            )}
+
+                            <div className={`max-w-3xl mx-auto mb-4 mt-10 text-center'}`}>
+                                <h2 className="text-3xl md:text-4xl text-center font-bold gradient-text mt-10">Links</h2>
+                            </div>
+                            <div className="mt-4 flex flex-wrap justify-center gap-3">
+                                {project.buttons.map((btn, i) => (
+                                    <a
+                                        key={i}
+                                        href={btn.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center rounded-md border border-primary px-4 py-1 text-sm font-medium text-primary shadow-sm transition hover:bg-primary/10"
+                                    >
+                                        {btn.label}
+                                    </a>
+                                ))}
+                            </div>
                         </div>
                     </div>
 

@@ -24,6 +24,18 @@ export const uxProjects = [
     tags: ["Product Management", "Agile", "Discovery", "Delivery", "A/B test"],
     image: "https://i.imgur.com/O8GkicE.jpeg",
     isUXProject: true,
+    longDescription: `
+    In February 2025, I led a one-month project to integrate generative AI into an ERP system for agribusiness, aiming to boost product visibility and lead generation through national media. Acting as both Product Manager and Product Owner, I coordinated a cross-functional team of over 20 professionals. I managed the entire cycle—from discovery and research to delivery—using tools like Notion for Gantt timelines, Jira for backlog and documentation (RICE, user stories, diagrams), and BPMN for business flows. I also supported UX/UI efforts and A/B testing. The result was an AI assistant capable of analyzing ERP data, generating reports, automating tasks, and interacting with the system via voice and image input, powered by OpenAI agents. The solution impressed company leadership and is set to be featured on Globo Rural and in major industry events.
+    `,
+    images: [
+      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data:" },
+      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Asking for AI to register a product with a picture of it:" },
+      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt to manage project tasks, forecasting the delivery:" },
+      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailled vision of each teammate task, managing dependecies:" }
+    ],
+    buttons: [
+      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" },
+    ],
   },
   {
     id: 2,
