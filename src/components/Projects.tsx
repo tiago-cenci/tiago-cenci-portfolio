@@ -21,7 +21,7 @@ export const uxProjects = [
     id: 1,
     title: "Filt - AI Integration in Agribusiness ERP",
     description: "Led the design, discovery, and delivery of an AI-powered assistant in a niche ERP for agribusiness. Delivered in 1 month with a cross-functional team of 20+ professionals.",
-    tags: ["Product Management", "Agile", "Discovery", "Delivery", "A/B test"],
+    tags: ["Product Management", "Project Management", "UX research", "AI"],
     image: "https://i.imgur.com/O8GkicE.jpeg",
     isUXProject: true,
     longDescription: `
@@ -41,9 +41,22 @@ export const uxProjects = [
     id: 2,
     title: "LavandCenter",
     description: "Based on a real project, made on voluntary work ",
-    tags: ["User Research", "Information Architecture", "Visual Design"],
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
+    tags: ["Product Discovery", "UX Design", "PRD", "Product Delivery"],
+    image: "https://i.imgur.com/dTtOwgq.png",
     isUXProject: true,
+    longDescription: `
+    In February 2025, I led a one-month project to integrate generative AI into an ERP system for agribusiness, aiming to boost product visibility and lead generation through national media. Acting as both Product Manager and Product Owner, I coordinated a cross-functional team of over 20 professionals. I managed the entire cycle—from discovery and research to delivery—using tools like Notion for Gantt timelines, Jira for backlog and documentation (RICE, user stories, diagrams), and BPMN for business flows. I also supported UX/UI efforts and A/B testing. The result was an AI assistant capable of analyzing ERP data, generating reports, automating tasks, and interacting with the system via voice and image input, powered by OpenAI agents. The solution impressed company leadership and is set to be featured on Globo Rural and in major industry events.
+    `,
+    images: [
+      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data:" },
+      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Asking for AI to register a product with a picture of it:" },
+      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt to manage project tasks, forecasting the delivery:" },
+      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailled vision of each teammate task, managing dependecies:" }
+    ],
+    buttons: [
+      { label: "Study Case", href: "https://www.figma.com/design/qI5yaniJlCxdogGsEawxng/TiagoCenci_LavandCenter?node-id=24-2&t=N787Wj9GphqlsfQo-1" },
+      { label: "Oficial docs", href: "https://drive.google.com/drive/folders/1Z6AbnBrGAjf9EmMJwHev1SSG6J_i61YK?usp=sharing" },
+    ],
   },
   {
     id: 3,
