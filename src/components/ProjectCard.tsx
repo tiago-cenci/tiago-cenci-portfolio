@@ -8,6 +8,7 @@ interface ProjectCardProps {
   tags: string[];
   image: string;
   index: number;
+  copyright?: string;
   isUXProject?: boolean;
   onViewDetails: () => void;
 }
@@ -17,6 +18,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
   description,
   tags,
+  copyright,
   image,
   index,
   isUXProject = false,
@@ -83,6 +85,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               </span>
             )}
           </div>
+          {copyright && (
+            <div className="mt-auto pt-2 text-xs text-muted-foreground text-right italic opacity-70">
+              {copyright}
+            </div>
+          )}
         </div>
       </div>
     </div>

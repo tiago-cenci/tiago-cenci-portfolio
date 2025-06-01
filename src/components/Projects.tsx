@@ -3,16 +3,56 @@ import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
-//  project data
+const currentYear = new Date().getFullYear();
+
 export const devProjects = [
   {
     id: 9,
     title: "Text to SQL - NLP",
+    copyright: `© ${currentYear} TIAGO CENCI`,
     description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
     tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
     image: "https://i.imgur.com/z9WCoV6.png",
     isUXProject: false,
-    longDescription: "This research project explores the capabilities of Natural Language Processing (NLP) in converting human language into SQL queries. By analyzing various pre-trained models including GPT-4o and Gemini 2.0-flash, the study compares accuracy, response time, and query complexity across different database management systems. The results demonstrate significant advancements in NLP interfaces for database interaction, potentially making database querying more accessible to non-technical users."
+    longDescription: `
+      This research project explores the capabilities of Natural Language Processing (NLP) in converting human language into SQL queries.
+      The study scientifically compares pre-trained models including GPT-4o and Gemini 2.0-flash regarding accuracy, response time, and query complexity.
+      Testing was done across different database management systems to evaluate performance and adaptability.
+      Results demonstrate significant advancements, indicating that NLP can make database querying more accessible to non-technical users.
+    `,
+    images: [
+      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data" },
+      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Requesting AI to register a product using a picture" },
+      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt chart managing project tasks and delivery forecasts" },
+      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailed view of team members' tasks and dependencies" }
+    ],
+    buttons: [
+      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" }
+    ]
+  },
+  {
+    id: 9,
+    title: "This Portfolio",
+    copyright: `© ${currentYear} TIAGO CENCI`,
+    description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
+    tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
+    image: "https://i.imgur.com/z9WCoV6.png",
+    isUXProject: false,
+    longDescription: `
+      This research project explores the capabilities of Natural Language Processing (NLP) in converting human language into SQL queries.
+      The study scientifically compares pre-trained models including GPT-4o and Gemini 2.0-flash regarding accuracy, response time, and query complexity.
+      Testing was done across different database management systems to evaluate performance and adaptability.
+      Results demonstrate significant advancements, indicating that NLP can make database querying more accessible to non-technical users.
+    `,
+    images: [
+      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data" },
+      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Requesting AI to register a product using a picture" },
+      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt chart managing project tasks and delivery forecasts" },
+      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailed view of team members' tasks and dependencies" }
+    ],
+    buttons: [
+      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" }
+    ]
   }
 ];
 
@@ -24,55 +64,112 @@ export const uxProjects = [
     tags: ["Product Management", "Project Management", "UX research", "AI"],
     image: "https://i.imgur.com/O8GkicE.jpeg",
     isUXProject: true,
+    copyright: `© ${currentYear} VIASOFT`,
     longDescription: `
-    In February 2025, I led a one-month project to integrate generative AI into an ERP system for agribusiness, aiming to boost product visibility and lead generation through national media. Acting as both Product Manager and Product Owner, I coordinated a cross-functional team of over 20 professionals. I managed the entire cycle—from discovery and research to delivery—using tools like Notion for Gantt timelines, Jira for backlog and documentation (RICE, user stories, diagrams), and BPMN for business flows. I also supported UX/UI efforts and A/B testing. The result was an AI assistant capable of analyzing ERP data, generating reports, automating tasks, and interacting with the system via voice and image input, powered by OpenAI agents. The solution impressed company leadership and is set to be featured on Globo Rural and in major industry events.
+      In February 2025, I led a one-month project to integrate generative AI into an ERP system for agribusiness.
+      The goal was to boost product visibility and lead generation through national media exposure.
+      I acted as both Product Manager and Product Owner, coordinating a cross-functional team of over 20 professionals.
+      Managed full project lifecycle: discovery, research, delivery, using Notion for Gantt timelines, Jira for backlog (RICE, user stories, diagrams), and BPMN for business flows.
+      Supported UX/UI design and A/B testing efforts.
+      Delivered an AI assistant capable of analyzing ERP data, generating reports, automating tasks, and interacting via voice and image inputs powered by OpenAI agents.
+      The solution impressed leadership and will be featured on Globo Rural and major industry events.
     `,
     images: [
-      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data:" },
-      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Asking for AI to register a product with a picture of it:" },
-      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt to manage project tasks, forecasting the delivery:" },
-      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailled vision of each teammate task, managing dependecies:" }
+      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data" },
+      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Requesting AI to register a product using a picture" },
+      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt chart managing project tasks and delivery forecasts" },
+      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailed view of team members' tasks and dependencies" }
     ],
     buttons: [
-      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" },
-    ],
+      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" }
+    ]
   },
   {
-    id: 2,
-    title: "LavandCenter",
-    description: "Based on a real project, made on voluntary work ",
-    tags: ["Product Discovery", "UX Design", "PRD", "Product Delivery"],
-    image: "https://i.imgur.com/dTtOwgq.png",
-    isUXProject: true,
-    longDescription: `
-    In February 2025, I led a one-month project to integrate generative AI into an ERP system for agribusiness, aiming to boost product visibility and lead generation through national media. Acting as both Product Manager and Product Owner, I coordinated a cross-functional team of over 20 professionals. I managed the entire cycle—from discovery and research to delivery—using tools like Notion for Gantt timelines, Jira for backlog and documentation (RICE, user stories, diagrams), and BPMN for business flows. I also supported UX/UI efforts and A/B testing. The result was an AI assistant capable of analyzing ERP data, generating reports, automating tasks, and interacting with the system via voice and image input, powered by OpenAI agents. The solution impressed company leadership and is set to be featured on Globo Rural and in major industry events.
-    `,
-    images: [
-      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data:" },
-      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Asking for AI to register a product with a picture of it:" },
-      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt to manage project tasks, forecasting the delivery:" },
-      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailled vision of each teammate task, managing dependecies:" }
+    "id": 2,
+    "title": "LavandCenter - Laundry Management System",
+    "description": "Case study covering Discovery, Requirement Gathering, UX/UI Design, and Documentation for a real voluntary project with an NGO to optimize laundry operations.",
+    "tags": ["UX/UI Design", "Product Discovery", "Lean", "Design Thinking"],
+    "image": "https://i.imgur.com/dTtOwgq.png",
+    "isUXProject": true,
+    "copyright": "© 2025 TIAGO CENCI",
+    "longDescription": `
+    In 2024, my university colleagues and I performed the discovery and delivery of a laundry management system developed voluntarily for GAMA, an NGO in Pato Branco (PR), Brazil.  
+
+    LavandCenter is a fictional case study based on that real project, created to improve and simulate a full product discovery, requirement gathering, prototyping, and documentation process as it would be done in a professional environment.  
+
+    The original project and its documentation are available for reference. This case study reflects my growth in product management and UX design by applying Lean and Design Thinking methodologies to solve real-world problems with a digital solution.  
+
+  `,
+    "images": [
+      {
+        "url": "https://i.imgur.com/LxsaALF.png",
+        "caption": "User Journey Map highlighting user emotions and key opportunities"
+      },
+      {
+        "url": "https://i.imgur.com/YFz8G6e.png",
+        "caption": "UX/UI design of the app’s main routine screen"
+      },
+      {
+        "url": "https://i.imgur.com/cgu9Qbm.png",
+        "caption": "Original's project desktop design"
+      },
+      {
+        "url": "https://i.imgur.com/aLYi721.png",
+        "caption": "Layout of the generated orders report in PDF  "
+      }
     ],
-    buttons: [
-      { label: "Study Case", href: "https://www.figma.com/design/qI5yaniJlCxdogGsEawxng/TiagoCenci_LavandCenter?node-id=24-2&t=N787Wj9GphqlsfQo-1" },
-      { label: "Oficial docs", href: "https://drive.google.com/drive/folders/1Z6AbnBrGAjf9EmMJwHev1SSG6J_i61YK?usp=sharing" },
-    ],
+    "buttons": [
+      { "label": "View full Case Study (Figma)", "href": "https://www.figma.com/design/qI5yaniJlCxdogGsEawxng/TiagoCenci_LavandCenter?node-id=24-2&t=9LqdLf5QqV2QAFFd-1" },
+      { "label": "See original's project design (Figma)", "href": "https://www.figma.com/design/ymve1oMf2a2QiJzxjAyVkD/GAMA?node-id=1-3&t=4YevgOVsjOCMYTZB-1" },
+      { "label": "Check the original's project PRD (Drive)", "href": "https://drive.google.com/drive/u/0/folders/1qpubOT2OM1IBRiSyHuszD_5BwjDi-L4T" }
+    ]
   },
   {
     id: 3,
-    title: "GAMA",
-    description: "Based on a real project, made on voluntary work ",
-    tags: ["User Research", "Information Architecture", "Visual Design"],
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&w=1000&q=80",
-    isUXProject: true,
-  },
-  {
-    id: 4,
-    title: "Activity Management App for Law Firms",
-    description: "A fictional case study to demonstrate my knowledge of product discovery, MVP definition, backlog prioritization, technical specification, launch, and monitoring.",
-    tags: ["Discovery", "Wireframing", "Delivery", "Management"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&w=1000&q=80",
-    isUXProject: true,
+    "title": "Activity Management App for Law Firms",
+    "description": "A fictional case study showcasing end-to-end product ownership: from discovery to launch, including MVP definition, prioritization, tech specs, and performance monitoring.",
+    "tags": ["Backlog Management", "Product Vision", "PRD", "ERD"],
+    "image": "https://i.imgur.com/4KwHz7b.png",
+    "isUXProject": true,
+    "copyright": "© 2025 TIAGO CENCI",
+    "longDescription": `
+    This fictional case study simulates my role as a Product Owner developing a task management feature for small and mid-sized law firms. It highlights my full-stack product skills—from understanding user needs to validating business impact.
+
+    I began by identifying key personas (lawyers, interns, and managers) and used interviews, empathy maps, and shadowing to uncover pain points such as deadline risks and fragmented workflows.
+
+    Quantitative and qualitative data (e.g., NPS, Likert surveys, log analysis, and benchmarking against tools like Astrea) guided the formation of hypotheses and MVP scope.
+
+    I used tools like journey maps, use case diagrams, and RICE scoring to prioritize the backlog. I also create tech specs (requirements and ERD), and low/mid-fidelity prototypes in Figma.
+
+    The MVP included features like deadline notifications, agenda views, and task-process linking. Success metrics were tracked through simulated analytics dashboards (e.g., Mixpanel) and qualitative feedback.
+
+    Requirements were documented using user stories, activity diagrams, acceptance criteria in Gherkin, ERDs, and API specs. This case reflects how I apply product thinking, structure discovery, and drive agile delivery with a real-world mindset—even in a fictional setup.
+    `,
+    "images": [
+      {
+        "url": "https://i.imgur.com/2YQuVDD.png",
+        "caption": "SWOT analysis of a competing product for benchmarking"
+      },
+      {
+        "url": "https://i.imgur.com/sJhwXVk.png",
+        "caption": "Stakeholder map to assess engagement and influence levels"
+      },
+      {
+        "url": "https://i.imgur.com/Hy3MMmq.png",
+        "caption": "Activity diagram for task management"
+      },
+      {
+        "url": "https://i.imgur.com/XUsDAue.png",
+        "caption": "Use case diagram of the system"
+      },
+      {
+        "url": "https://i.imgur.com/i4yIlza.png",
+        "caption": "Wireframe for activity registration"
+      }
+    ],
+    "buttons": [
+      { "label": "View full Case Study (Docs)", "href": "https://docs.google.com/document/d/12O9egtmDoWwFDFQEq0McO1JP3yt1GIpVVHbheNb6wlU/edit?usp=sharing" },
+    ]
   }
 ];
 
@@ -173,6 +270,7 @@ const Projects = () => {
               description={project.description}
               tags={project.tags}
               image={project.image}
+              copyright={project.copyright}
               index={index}
               isUXProject={project.isUXProject}
               onViewDetails={() => handleOpenProjectDetails(project)}
