@@ -77,8 +77,8 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="/public\Tiago_Cenci_CV_English (1).pdf"
-            download="Tiago_Cenci_CV_English (1).pdf"
+            href="/public\tiago_cenci_resume-EN.pdf"
+            download="tiago_cenci_resume-EN.pdf"
             className="inline-flex items-center justify-center h-9 px-4 rounded-md bg-[conic-gradient(#3b82f6,#06b6d4,#3b82f6)]
  text-primary-foreground text-sm font-medium transition-colors hover:bg-primary/90"
           >
