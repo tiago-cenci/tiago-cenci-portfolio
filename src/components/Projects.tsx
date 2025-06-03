@@ -8,9 +8,9 @@ const currentYear = new Date().getFullYear();
 export const devProjects = [
   {
     id: 9,
-    title: "Text to SQL - NLP",
+    title: "SQL_AI_Assistant: Text to SQL - NLP",
     copyright: `© ${currentYear} TIAGO CENCI`,
-    description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
+    description: "A project developed for my bachelor's thesis and academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
     tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
     image: "https://i.imgur.com/z9WCoV6.png",
     isUXProject: false,
@@ -27,31 +27,34 @@ export const devProjects = [
       { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailed view of team members' tasks and dependencies" }
     ],
     buttons: [
-      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" }
+      {
+        label: "Bachelor's thesis",
+        href: "https://riut.utfpr.edu.br/jspui/handle/1/34422"
+      },
+      {
+        label: "Frontend Project (GitHub)",
+        href: "https://github.com/tiago-cenci/AI-text-to-sql-Frontend"
+      }
     ]
   },
   {
-    id: 9,
+    id: 10,
     title: "This Portfolio",
     copyright: `© ${currentYear} TIAGO CENCI`,
-    description: "A project developed for an academic paper, focused on scientifically analyzing natural language interfaces for generating SQL queries in different DBMS, testing pre-trained models like GPT",
-    tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
-    image: "https://i.imgur.com/z9WCoV6.png",
+    description: "Check the code behind this page!",
+    tags: ["React", "Typescript", "HTML", "CSS"],
+    image: "https://i.imgur.com/UfqMT6K.png",
     isUXProject: false,
     longDescription: `
-      This research project explores the capabilities of Natural Language Processing (NLP) in converting human language into SQL queries.
-      The study scientifically compares pre-trained models including GPT-4o and Gemini 2.0-flash regarding accuracy, response time, and query complexity.
-      Testing was done across different database management systems to evaluate performance and adaptability.
-      Results demonstrate significant advancements, indicating that NLP can make database querying more accessible to non-technical users.
-    `,
+    I created this portfolio to showcase my projects as a product owner/manager and analyst. 
+    The main goal was to build a fast, responsive, and clean interface that reflects my professional identity. 
+    The entire layout was designed with scalability and maintainability in mind, including support for new project entries and UI updates.
+    All code is open-source and available on GitHub.    `,
     images: [
-      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "Inside system using AI to generate a graphic with database data" },
-      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Requesting AI to register a product using a picture" },
-      { url: "https://i.imgur.com/aV7RM4W.png", caption: "Notion Gantt chart managing project tasks and delivery forecasts" },
-      { url: "https://i.imgur.com/M85HeBE.png", caption: "Detailed view of team members' tasks and dependencies" }
+      { url: "https://i.imgur.com/UfqMT6K.png", caption: "The main page" },
     ],
     buttons: [
-      { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" }
+      { label: "GitHub", href: "https://github.com/tiago-cenci/tiago-cenci-portfolio" }
     ]
   }
 ];
