@@ -73,9 +73,7 @@ const Hero = () => {
               )}
             >
               <p className="text-lg text-foreground/80 mb-8">
-                I specialize in digital product management with a strong technical foundation.
-                With experience in roadmap planning, backlog management, and discovery, I collaborate closely with development teams and contribute hands-on to implementation using technologies like Java, Spring Boot, React, and SQL.
-                I build impactful products by combining strategy, design, and code.
+                Product Manager with technical background working throughout the product journey – from discovery to delivery, since 2020 in the technology area. I've led multidisciplinary squads, created validated MVPs with real impact, implemented AI in B2B products, and reduced the delivery cycle with agile methods. Strong performance in SaaS, data, and agribusiness, with mastery of tools such as Jira, Figma, SQL, and APIs.
               </p>
             </div>
 
