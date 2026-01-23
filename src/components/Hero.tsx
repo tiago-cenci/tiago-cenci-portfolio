@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const roles = ["Product Manager", "Techinal PM",];
+  const roles = ["Product Manager", "Strategy, Roadmap, Cross-Functional Leadership", "SaaS B2B, APIs, Data & AI"];
 
   useEffect(() => {
     setIsVisible(true);
@@ -73,8 +73,7 @@ const Hero = () => {
               )}
             >
               <p className="text-lg text-foreground/80 mb-8">
-                Product Manager with technical background working throughout the product journey – from discovery to delivery, since 2020 in the technology area. I've led multidisciplinary squads, created validated MVPs with real impact, implemented AI in B2B products, and reduced the delivery cycle with agile methods. Strong performance in SaaS, data, and agribusiness, with mastery of tools such as Jira, Figma, SQL, and APIs.
-              </p>
+                Technical Product Manager with experience building B2B SaaS products in data-heavy and API-driven environments since 2020. I work end-to-end across discovery, requirements, delivery, and post-launch analysis, partnering closely with engineering, data, and design teams. I’ve led MVPs, AI-driven initiatives, and complex integrations, delivering measurable business impact. Experience working in English with cross-functional teams and technical stakeholders in distributed environments.              </p>
             </div>
 
             <div

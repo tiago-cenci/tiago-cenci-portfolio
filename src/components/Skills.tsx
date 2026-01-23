@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import SkillTag from "./SkillTag";
 
@@ -6,80 +5,87 @@ interface SkillCategory {
   title: string;
   skills: string[];
 }
+
 const skillCategories: SkillCategory[] = [
   {
     title: "Product",
     skills: [
       "Product Management",
-      "Roadmap Planning",
-      "Backlog Management",
-      "Discovery",
-      "Delivery",
-      "Design Thinking",
+      "Product Discovery",
+      "Product Delivery",
+      "Roadmap Strategy",
+      "Backlog Prioritization",
+      "Stakeholder Management",
+      "User Research",
+      "MVP Definition",
+      "Outcome-Driven Development",
       "OKRs",
-      "KPIs",
-      "Data-Driven Decisions",
-      "Team Leadership",
+      "KPIs & Metrics",
+      "Data-Informed Decision Making",
+      "Cross-Functional Leadership",
+      "Agile Product Development",
       "Scrum",
       "Kanban",
-      "Lean Inception",
-      "Projects Management (PMBOK)"
+      "Lean Inception"
     ]
   },
   {
-    title: "Development",
+    title: "Technical",
     skills: [
-      "Java",
-      "Spring Boot",
-      "Kotlin",
-      "React",
-      "Next.js",
-      "JS/TS",
-      "PL/SQL",
-      "PostgrSQL",
-      "MySQL",
-      "Oracle",
-      "Angular (basic)",
-      "Python (basic)",
-      "MongoDB (basic)",
-      "C# (basic)"
+      "APIs (REST)",
+      "System Design (High-Level)",
+      "Integration Design",
+      "Data Modeling",
+      "SQL",
+      "ERP Systems",
+      "AI-powered Products",
+      "LLMs (Applied)",
+      "Cloud Concepts",
+      "Event-driven Architecture (Basic)"
+    ]
+  },
+  {
+    title: "Data & Analytics",
+    skills: [
+      "Product Metrics",
+      "Funnel Analysis",
+      "Cohort Analysis",
+      "User Behavior Analysis",
+      "A/B Testing (Concepts)",
+      "SQL for Analytics",
+      "Data Visualization"
     ]
   },
   {
     title: "Tools",
     skills: [
-      "Git",
-      "Postman",
-      "IntelliJ",
-      "VS Code",
-      "Android Studio",
-      "Figma",
       "Jira",
       "Confluence",
-      "BPMN",
-      "Bizagi",
-      "Miro"
+      "Figma",
+      "Miro",
+      "Notion",
+      "Postman",
+      "Git",
+      "Looker (Basic)",
+      "Mixpanel (Basic)"
     ]
   },
   {
-    title: "Others",
+    title: "Domain",
     skills: [
-      "APIs (REST)",
-      "ERPs",
-      "Artificial Intelligence",
-      "LLMs",
-      "AgTech (Agribusiness)",
-      "B2B Systems"
+      "B2B SaaS",
+      "Enterprise Software",
+      "ERP Platforms",
+      "AgTech / Agribusiness",
+      "AI in Business Products"
     ]
   }
 ];
-
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState<string>(skillCategories[0].title);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Set up intersection observer for scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -91,27 +97,28 @@ const Skills = () => {
     );
 
     const section = document.getElementById("skills");
-    if (section) {
-      observer.observe(section);
-    }
+    if (section) observer.observe(section);
 
     return () => {
-      if (section) {
-        observer.unobserve(section);
-      }
+      if (section) observer.unobserve(section);
     };
   }, []);
 
   return (
     <section id="skills" className="py-20 md:py-32 relative">
       <div className="container px-4 md:px-6">
-        <div className={`max-w-3xl mx-auto mb-12 text-center transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">Hard Skills</h2>
+        <div
+          className={`max-w-3xl mx-auto mb-12 text-center transition-all duration-700 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
+            Hard Skills
+          </h2>
           <p className="text-foreground/70 mb-8">
-            The technologies and methodologies I work with to deliver successful products
+            Skills and capabilities I use to build, scale, and lead successful
+            products
           </p>
 
-          {/* Skill category tabs */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
             {skillCategories.map((category) => (
               <button
@@ -128,13 +135,18 @@ const Skills = () => {
           </div>
         </div>
 
-        {/* Skills grid */}
-        <div className={`bg-card rounded-xl shadow-xl p-6 border border-border backdrop-blur-sm relative overflow-hidden transition-all duration-700 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div
+          className={`bg-card rounded-xl shadow-xl p-6 border border-border backdrop-blur-sm relative overflow-hidden transition-all duration-700 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+        >
           <div className="max-w-4xl mx-auto">
             {skillCategories
               .filter((category) => category.title === activeTab)
               .map((category) => (
-                <div key={category.title} className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div
+                  key={category.title}
+                  className="grid grid-cols-2 md:grid-cols-4 gap-3"
+                >
                   {category.skills.map((skill, index) => (
                     <SkillTag
                       key={skill}
@@ -147,9 +159,8 @@ const Skills = () => {
               ))}
           </div>
 
-          {/* Background glow */}
-          <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full filter blur-2xl"></div>
-          <div className="absolute -left-20 -top-20 w-64 h-64 bg-accent/5 rounded-full filter blur-2xl"></div>
+          <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/5 rounded-full blur-2xl" />
+          <div className="absolute -left-20 -top-20 w-64 h-64 bg-accent/5 rounded-full blur-2xl" />
         </div>
       </div>
     </section>
