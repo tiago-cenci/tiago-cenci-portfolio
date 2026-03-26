@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { Star } from 'lucide-react'; // Certifique-se de ter lucide-react instalado
+import StudentAppVideoImg from '../../public/aluno envio do video e ver correcoes do personal.png'
+import StudentAppCorrectionImg from '../../public/app do aluno - execução do treino.png'
+import PersonalDashboardImg from '../../public/dashboard do personal.png'
+import PersonalCorrectionImg from '../../public/personal recebe correções avalia pela plataforma.png'
+import LandingPageImg from '../../public/landing page.png'
 
 const currentYear = new Date().getFullYear();
 
@@ -128,6 +133,7 @@ export const uxProjects: Project[] = [
       { url: "https://i.imgur.com/M85HeBE.png", caption: "Team tasks view" }
     ],
     buttons: [
+      { label: "Official Product Page", href: "https://viasoft.com.br/filt/" },
       { label: "Notion", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" }
     ]
   },
@@ -172,51 +178,54 @@ export const uxProjects: Project[] = [
   },
   {
     id: 1,
-    title: "MUVTRAINER — AI-Powered Fitness Platform (0→1)",
+    title: "MUVTRAINER — B2B SaaS for Online Personal Trainers",
+    copyright: `© ${currentYear} TIAGO CENCI`,
     description:
-      "End-to-end product and business development of an AI-powered fitness platform, focused on personalization, user adherence, and scalable training recommendations. This project is a hands-on 0→1 initiative where I own the entire lifecycle—from problem discovery and product strategy to solution design and business modeling—gaining deep insights into user behavior, market dynamics, and real-world product decision-making.",
-    tags: ["Product Management", "AI", "SaaS", "0→1", "Startup"],
-    image: "https://i.imgur.com/4KwHz7b.png", // troca depois se tiver melhor
-    categories: ["ux"], copyright: `© ${currentYear} TIAGO CENCI`,
+      "Founder-led product: a SaaS platform for high-performance personal trainers to manage clients, workouts, and video corrections — currently in MVP development.",
+    tags: ["Product Strategy", "B2B SaaS", "0→1", "Founder"],
+    image: LandingPageImg,
+    categories: ["ux", "dev"],
+    situation: "As an online coaching client myself, I experienced firsthand the chaos personal trainers operate in: WhatsApp for communication, spreadsheets for workouts, Google Drive for videos, and note apps for observations. This patchwork works up to ~50 students, but breaks completely when a trainer scales past R$10k/month. Existing apps cover generic fitness use cases but fail at the specific workflows of high-performance online consulting.",
 
-    situation:
-      "Most fitness apps struggle with long-term user engagement due to lack of personalization and static training plans. Users often abandon workouts because they do not adapt to their progress, goals, or real-life constraints.",
-
-    task:
-      "To design and build a 0→1 AI-powered fitness platform capable of generating personalized training plans, adapting workouts dynamically based on user behavior, and improving long-term adherence — while defining a scalable product and business model.",
+    task: "Identify whether a focused B2B SaaS could solve the operational chaos of high-revenue online personal trainers — and, as the founding PM, take the product from zero to a testable MVP, making all product, architecture, and business model decisions end-to-end.",
 
     action: [
-      "• Led full product discovery, defining problem space, user personas, and core pain points based on market analysis and personal domain experience.",
-      "• Designed the product vision, value proposition, and MVP scope focused on training generation and progress tracking.",
-      "• Modeled the system architecture and data structure to support scalability and future AI-driven personalization.",
-      "• Explored AI use cases including training recommendation logic, adaptive feedback loops, and behavior-based adjustments.",
-      "• Created user flows and product structure, prioritizing simplicity and adherence over feature complexity.",
-      "• Defined initial roadmap and go-to-market strategy for a SaaS fitness product.",
+      "• Conducted informal discovery with active online personal trainers to map the as-is workflow and identify the highest-friction points: managing video corrections per exercise was the critical unresolved pain.",
+      "• Defined the product thesis: a platform exclusively for high-performance trainers (≥50 students, ≥R$10k/month) — not a generic fitness app or marketplace.",
+      "• Built a full product case in Miro covering Problem Tree, JTBD, As-Is/To-Be journey, Opportunity Solution Tree, MVP scope with intentional trade-offs, architecture decisions, business model hypothesis, and metrics framework.",
+      "• Made a key architectural decision to not store videos in the product's own infrastructure — trainers connect their Google Drive via OAuth, and the app indexes and consumes files from there, reducing LGPD risk and keeping storage costs near zero.",
+      "• Defined MVP scope deliberately lean: student management, workout creation, correction queue, Google Drive integration, and a basic operational dashboard — leaving out AI, gamification, payments, and native app for post-validation phases.",
+      "• Leading MVP development using AI-assisted vibe coding (Lovable), owning the full product lifecycle from discovery to deployment without a dedicated dev team.",
+      "• Engaged key personal trainers as early partners to beta test the MVP, with a freemium-first go-to-market before introducing tiered SaaS pricing."
     ],
 
     result: [
-      "• Delivered a fully structured product ready for MVP development, with clear positioning and differentiation in a competitive fitness market.",
-      "• Established a scalable foundation for AI-driven recommendations through early data modeling and product architecture decisions.",
-      "• Validated the problem space and product direction, reducing risk before development investment.",
-      "• Built strong hands-on experience in 0→1 product development, combining product strategy, UX, and technical thinking.",
+      "• MVP in active development — no launch results yet; this case demonstrates the full end-to-end PM process from problem identification to product execution.",
+      "• Defined North Star Metric (MRR from active trainers) and secondary metrics: corrections processed per week, average video-to-correction time, trainer retention at 30/60/90 days.",
+      "• Hypotheses under validation: 30–50% reduction in time spent on corrections, elimination of local video storage, and increased perceived value for the end student.",
+      "• Conscious risks accepted: trainer resistance to behavior change, WhatsApp dependency, and fragmented market — treated as learning opportunities, not blockers."
     ],
 
     toolsValue: [
-      "• Figma used to design user flows and product experience.",
-      "• Supabase and relational modeling to structure training, exercises, and user data.",
-      "• AI exploration with LLMs to define recommendation logic and future automation capabilities.",
-      "• Notion used for product documentation, roadmap, and decision tracking.",
+      "• Miro used as the primary PM workspace for structured product thinking: Problem Tree, OST, journey maps, MVP scoping, and business model canvas.",
+      "• Google Drive OAuth integration as a core architectural decision — enabling near-zero storage costs and keeping trainers in full control of their data.",
+      "• Lovable (AI vibe coding) used to accelerate MVP development, enabling a solo founder-PM to ship a functional product without a traditional engineering team."
     ],
 
     images: [
-      { url: "https://i.imgur.com/4KwHz7b.png", caption: "Product concept and structure" }
+      { url: PersonalDashboardImg, caption: "Personal trainer's dashboard on his web platform" },
+      { url: StudentAppCorrectionImg, caption: "Student's app to see and follow training" },
+      { url: StudentAppVideoImg, caption: "Student send his exercise execution video through the app directly to cloud storage" },
+      { url: PersonalCorrectionImg, caption: "Personal trainer receive all videos cetralized to make his corrections, withou storaging any video" },
+
     ],
 
     buttons: [
-      // pode adicionar depois tipo:
-      // { label: "View Prototype", href: "link-figma" }
+      { label: "Product Case (Miro)", href: "https://miro.com/app/board/uXjVGDZzetw=/?share_link_id=752931549135" },
+      { label: "Official Landing Page", href: "https:muvtrainer.com" }
+
     ]
-  }
+  },
   // {
   //   id: 3,
   //   title: "Activity Management App for Law Firms",
