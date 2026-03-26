@@ -12,7 +12,7 @@ type Project = {
   description: string;
   tags: string[];
   image: string;
-  isUXProject: boolean;
+  categories: ("ux" | "dev")[]; // 👈 NOVO
   situation?: string;
   task?: string;
   action?: string[];
@@ -32,8 +32,7 @@ export const devProjects: Project[] = [
       "Bachelor’s thesis applying NLP to enable natural language SQL generation across DBMS, comparing GPT and Gemini models.",
     tags: ["React", "Python", "GPT-4o", "Gemini 2.0-flash"],
     image: "https://i.imgur.com/z9WCoV6.png",
-    isUXProject: false,
-    // STAR Method Fields
+    categories: ["dev"],    // STAR Method Fields
     situation: "Non-technical users often struggle to query databases, limiting access to business insights and increasing reliance on technical teams.",
     task: "To design and develop an NLP-driven system capable of converting natural language queries into SQL, and to evaluate the performance of GPT-4o and Gemini 2.0-flash models across various DBMS (PostgreSQL, MySQL, Oracle).",
     action: [
@@ -68,8 +67,7 @@ export const devProjects: Project[] = [
     description: "Scalable, open-source portfolio to showcase product and UX projects.",
     tags: ["React", "Typescript", "Vercel", "Git"],
     image: "https://i.imgur.com/UfqMT6K.png",
-    isUXProject: false,
-    // STAR Method Fields
+    categories: ["dev"],    // STAR Method Fields
     situation: "I needed a robust and visually appealing platform to effectively communicate my diverse experience in product and to present detailed case studies.",
     task: "To design and develop a responsive, high-performance portfolio website that clearly showcases my projects, skills, and professional journey, ensuring easy maintenance and future scalability.",
     action: [
@@ -97,14 +95,13 @@ export const devProjects: Project[] = [
 
 export const uxProjects: Project[] = [
   {
-    id: 1,
+    id: 2,
     title: "AI Integration in Agribusiness ERP",
     description:
       "Led the design, discovery, and delivery of an AI-powered assistant in a ERP for agribusiness. Delivered in 1 month with a cross-functional team of 20+ professionals.",
     tags: ["Product Management", "Project Management", "UX research", "AI"],
     image: "https://i.imgur.com/O8GkicE.jpeg",
-    isUXProject: true,
-    copyright: `© ${currentYear} VIASOFT`,
+    categories: ["ux"], copyright: `© ${currentYear} VIASOFT`,
     // STAR Method Fields
     situation: "The executive team requested an AI-focused initiative to improve user interaction and lead acquisition in a growing product.",
     task: "Lead the entire product team in a fast-paced discovery and delivery of an AI-powered solution integrated into the ERP system — enabling multimodal input (voice, image, text) for dynamic report generation and automation of manual tasks — all within a one-month deadline and with a cross-functional team of 20+ professionals.",
@@ -135,14 +132,13 @@ export const uxProjects: Project[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "LavandCenter - Laundry Management System",
     description:
       "Case study covering Discovery, Requirement Gathering, UX/UI Design, and Documentation for a real voluntary project with an NGO to optimize laundry operations.",
     tags: ["UX/UI Design", "Product Discovery", "Design Thinking", "Lean"],
     image: "https://i.imgur.com/dTtOwgq.png",
-    isUXProject: true,
-    copyright: "© 2025 TIAGO CENCI",
+    categories: ["ux"], copyright: "© 2025 TIAGO CENCI",
     // STAR Method Fields
     situation: "A local NGO's laundry operations were highly inefficient, relying on manual, paper-based processes that caused significant service delays and operational bottlenecks.",
     task: "To conduct an end-to-end product discovery and design process for a digital laundry management system, simulating a real business case using Design Thinking and Lean methodologies, to optimize operations and improve service delivery.",
@@ -175,45 +171,92 @@ export const uxProjects: Project[] = [
     ]
   },
   {
-    id: 3,
-    title: "Activity Management App for Law Firms",
+    id: 1,
+    title: "MUVTRAINER — AI-Powered Fitness Platform (0→1)",
     description:
-      "Fictional case study showcasing end-to-end product ownership: from discovery to launch, including MVP definition, prioritization, tech specs, and performance monitoring.",
-    tags: ["Backlog Management", "Product Vision", "PRD", "ERD"],
-    image: "https://i.imgur.com/4KwHz7b.png",
-    isUXProject: true,
-    copyright: "© 2025 TIAGO CENCI",
-    // STAR Method Fields
-    situation: "Law firms lacked structured digital workflows for tracking activities and managing critical legal deadlines, leading to potential missed deadlines and operational inefficiencies.",
-    task: "To simulate an end-to-end product ownership process, from initial discovery to defining technical specifications and monitoring performance, for an activity management application tailored for law firms, including MVP definition and prioritization.",
+      "End-to-end product and business development of an AI-powered fitness platform, focused on personalization, user adherence, and scalable training recommendations. This project is a hands-on 0→1 initiative where I own the entire lifecycle—from problem discovery and product strategy to solution design and business modeling—gaining deep insights into user behavior, market dynamics, and real-world product decision-making.",
+    tags: ["Product Management", "AI", "SaaS", "0→1", "Startup"],
+    image: "https://i.imgur.com/4KwHz7b.png", // troca depois se tiver melhor
+    categories: ["ux"], copyright: `© ${currentYear} TIAGO CENCI`,
+
+    situation:
+      "Most fitness apps struggle with long-term user engagement due to lack of personalization and static training plans. Users often abandon workouts because they do not adapt to their progress, goals, or real-life constraints.",
+
+    task:
+      "To design and build a 0→1 AI-powered fitness platform capable of generating personalized training plans, adapting workouts dynamically based on user behavior, and improving long-term adherence — while defining a scalable product and business model.",
+
     action: [
-      "• Conducted simulated discovery interviews and competitive benchmarking (SWOT analysis) to define the core problem and market opportunity.",
-      "• Mapped detailed user journeys and use cases to understand user interactions and system requirements.",
-      "• Created a prioritized product backlog using RICE scoring to define the Minimum Viable Product (MVP).",
-      "• Developed mockups and Entity-Relationship Diagrams (ERDs) to visualize the application's structure and data model.",
-      "• Defined API specifications and wrote Gherkin-based acceptance criteria for all key features, ensuring clear communication with development teams."
+      "• Led full product discovery, defining problem space, user personas, and core pain points based on market analysis and personal domain experience.",
+      "• Designed the product vision, value proposition, and MVP scope focused on training generation and progress tracking.",
+      "• Modeled the system architecture and data structure to support scalability and future AI-driven personalization.",
+      "• Explored AI use cases including training recommendation logic, adaptive feedback loops, and behavior-based adjustments.",
+      "• Created user flows and product structure, prioritizing simplicity and adherence over feature complexity.",
+      "• Defined initial roadmap and go-to-market strategy for a SaaS fitness product.",
     ],
+
     result: [
-      "• Produced a comprehensive product documentation package (PRD, ERDs, API specs) that provided a clear blueprint for development.",
-      "• Designed a system that, hypothetically, could improve task scheduling and reduce missed deadlines by 30% through structured digital workflows.",
-      "• Enhanced stakeholder clarity and alignment through the use of visual artifacts and detailed specifications, facilitating a shared understanding of the product vision."
+      "• Delivered a fully structured product ready for MVP development, with clear positioning and differentiation in a competitive fitness market.",
+      "• Established a scalable foundation for AI-driven recommendations through early data modeling and product architecture decisions.",
+      "• Validated the problem space and product direction, reducing risk before development investment.",
+      "• Built strong hands-on experience in 0→1 product development, combining product strategy, UX, and technical thinking.",
     ],
+
     toolsValue: [
-      "Figma and Lucidchart were instrumental in visualizing user flows, wireframes, and system architecture.",
-      "Google Docs provided a centralized and traceable repository for all product specifications and documentation.",
-      "Simulated analytics dashboards (Mixpanel-type) were used to define key performance indicators and track hypothetical product success."
+      "• Figma used to design user flows and product experience.",
+      "• Supabase and relational modeling to structure training, exercises, and user data.",
+      "• AI exploration with LLMs to define recommendation logic and future automation capabilities.",
+      "• Notion used for product documentation, roadmap, and decision tracking.",
     ],
+
     images: [
-      { url: "https://i.imgur.com/2YQuVDD.png", caption: "SWOT benchmark" },
-      { url: "https://i.imgur.com/sJhwXVk.png", caption: "Stakeholder map" },
-      { url: "https://i.imgur.com/Hy3MMmq.png", caption: "Activity diagram" },
-      { url: "https://i.imgur.com/XUsDAue.png", caption: "Use case diagram" },
-      { url: "https://i.imgur.com/i4yIlza.png", caption: "Wireframe" }
+      { url: "https://i.imgur.com/4KwHz7b.png", caption: "Product concept and structure" }
     ],
+
     buttons: [
-      { label: "View full Case Study (Docs )", href: "https://docs.google.com/document/d/12O9egtmDoWwFDFQEq0McO1JP3yt1GIpVVHbheNb6wlU/edit?usp=sharing" }
+      // pode adicionar depois tipo:
+      // { label: "View Prototype", href: "link-figma" }
     ]
   }
+  // {
+  //   id: 3,
+  //   title: "Activity Management App for Law Firms",
+  //   description:
+  //     "Fictional case study showcasing end-to-end product ownership: from discovery to launch, including MVP definition, prioritization, tech specs, and performance monitoring.",
+  //   tags: ["Backlog Management", "Product Vision", "PRD", "ERD"],
+  //   image: "https://i.imgur.com/4KwHz7b.png",
+  //   isUXProject: true,
+  //   copyright: "© 2025 TIAGO CENCI",
+  //   // STAR Method Fields
+  //   situation: "Law firms lacked structured digital workflows for tracking activities and managing critical legal deadlines, leading to potential missed deadlines and operational inefficiencies.",
+  //   task: "To simulate an end-to-end product ownership process, from initial discovery to defining technical specifications and monitoring performance, for an activity management application tailored for law firms, including MVP definition and prioritization.",
+  //   action: [
+  //     "• Conducted simulated discovery interviews and competitive benchmarking (SWOT analysis) to define the core problem and market opportunity.",
+  //     "• Mapped detailed user journeys and use cases to understand user interactions and system requirements.",
+  //     "• Created a prioritized product backlog using RICE scoring to define the Minimum Viable Product (MVP).",
+  //     "• Developed mockups and Entity-Relationship Diagrams (ERDs) to visualize the application's structure and data model.",
+  //     "• Defined API specifications and wrote Gherkin-based acceptance criteria for all key features, ensuring clear communication with development teams."
+  //   ],
+  //   result: [
+  //     "• Produced a comprehensive product documentation package (PRD, ERDs, API specs) that provided a clear blueprint for development.",
+  //     "• Designed a system that, hypothetically, could improve task scheduling and reduce missed deadlines by 30% through structured digital workflows.",
+  //     "• Enhanced stakeholder clarity and alignment through the use of visual artifacts and detailed specifications, facilitating a shared understanding of the product vision."
+  //   ],
+  //   toolsValue: [
+  //     "Figma and Lucidchart were instrumental in visualizing user flows, wireframes, and system architecture.",
+  //     "Google Docs provided a centralized and traceable repository for all product specifications and documentation.",
+  //     "Simulated analytics dashboards (Mixpanel-type) were used to define key performance indicators and track hypothetical product success."
+  //   ],
+  //   images: [
+  //     { url: "https://i.imgur.com/2YQuVDD.png", caption: "SWOT benchmark" },
+  //     { url: "https://i.imgur.com/sJhwXVk.png", caption: "Stakeholder map" },
+  //     { url: "https://i.imgur.com/Hy3MMmq.png", caption: "Activity diagram" },
+  //     { url: "https://i.imgur.com/XUsDAue.png", caption: "Use case diagram" },
+  //     { url: "https://i.imgur.com/i4yIlza.png", caption: "Wireframe" }
+  //   ],
+  //   buttons: [
+  //     { label: "View full Case Study (Docs )", href: "https://docs.google.com/document/d/12O9egtmDoWwFDFQEq0McO1JP3yt1GIpVVHbheNb6wlU/edit?usp=sharing" }
+  //   ]
+  //  }
 ];
 
 const Projects = () => {
@@ -222,15 +265,17 @@ const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [visibleItems, setVisibleItems] = useState(false);
 
+  const allProjects = [...uxProjects, ...devProjects];
+
   const getFilteredProjects = () => {
-    switch (activeFilter) {
-      case 'ux':
-        return uxProjects;
-      case 'dev':
-        return devProjects;
-      default:
-        return [...uxProjects, ...devProjects];
-    }
+    const filtered =
+      activeFilter === "all"
+        ? allProjects
+        : allProjects.filter(project =>
+          project.categories.includes(activeFilter)
+        );
+
+    return [...filtered].sort((a, b) => a.id - b.id); // 👈 ORDEM FIXA
   };
 
   const handleOpenProjectDetails = (project: Project) => {
@@ -311,7 +356,7 @@ const Projects = () => {
               image={project.image}
               copyright={project.copyright}
               index={index}
-              isUXProject={project.isUXProject}
+              categories={project.categories} // 👈 IMPORTANTE
               onViewDetails={() => handleOpenProjectDetails(project)}
             />
           ))}
