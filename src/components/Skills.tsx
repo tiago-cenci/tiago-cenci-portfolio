@@ -26,8 +26,9 @@ const skillCategories: SkillCategory[] = [
       "Agile Product Development",
       "Scrum",
       "Kanban",
-      "Lean Inception"
-    ]
+      "Lean Inception",
+      "Go-to-Market (GTM)",
+    ],
   },
   {
     title: "Technical",
@@ -41,8 +42,10 @@ const skillCategories: SkillCategory[] = [
       "AI-powered Products",
       "LLMs (Applied)",
       "Cloud Concepts",
-      "Event-driven Architecture (Basic)"
-    ]
+      "Event-driven Architecture (Basic)",
+      "Device Management Infrastructure",
+      "Enterprise Networking Concepts",
+    ],
   },
   {
     title: "Data & Analytics",
@@ -53,22 +56,24 @@ const skillCategories: SkillCategory[] = [
       "User Behavior Analysis",
       "A/B Testing (Concepts)",
       "SQL for Analytics",
-      "Data Visualization"
-    ]
+      "Data Visualization",
+      "Error Analysis",
+    ],
   },
   {
     title: "Tools",
     skills: [
       "Jira",
       "Confluence",
+      "Azure DevOps",
       "Figma",
       "Miro",
       "Notion",
       "Postman",
       "Git",
       "Looker (Basic)",
-      "Mixpanel (Basic)"
-    ]
+      "Mixpanel (Basic)",
+    ],
   },
   {
     title: "Domain",
@@ -76,10 +81,13 @@ const skillCategories: SkillCategory[] = [
       "B2B SaaS",
       "Enterprise Software",
       "ERP Platforms",
+      "Platform Products",
+      "Device Management (MPS)",
       "AgTech / Agribusiness",
-      "AI in Business Products"
-    ]
-  }
+      "AI in Business Products",
+      "API Ecosystems",
+    ],
+  },
 ];
 
 const Skills = () => {
@@ -108,8 +116,9 @@ const Skills = () => {
     <section id="skills" className="py-20 md:py-32 relative">
       <div className="container px-4 md:px-6">
         <div
-          className={`max-w-3xl mx-auto mb-12 text-center transition-all duration-700 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+          className={`max-w-3xl mx-auto mb-12 text-center transition-all duration-700 transform ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
             Hard Skills
@@ -123,10 +132,11 @@ const Skills = () => {
             {skillCategories.map((category) => (
               <button
                 key={category.title}
-                className={`px-4 py-2 text-sm rounded-md transition-all duration-200 ${activeTab === category.title
-                  ? "bg-primary text-primary-foreground scale-105"
-                  : "bg-secondary text-foreground/70 hover:text-foreground hover:scale-105"
-                  }`}
+                className={`px-4 py-2 text-sm rounded-md transition-all duration-200 ${
+                  activeTab === category.title
+                    ? "bg-primary text-primary-foreground scale-105"
+                    : "bg-secondary text-foreground/70 hover:text-foreground hover:scale-105"
+                }`}
                 onClick={() => setActiveTab(category.title)}
               >
                 {category.title}
@@ -136,8 +146,9 @@ const Skills = () => {
         </div>
 
         <div
-          className={`bg-card rounded-xl shadow-xl p-6 border border-border backdrop-blur-sm relative overflow-hidden transition-all duration-700 transform ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
+          className={`bg-card rounded-xl shadow-xl p-6 border border-border backdrop-blur-sm relative overflow-hidden transition-all duration-700 transform ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
         >
           <div className="max-w-4xl mx-auto">
             {skillCategories

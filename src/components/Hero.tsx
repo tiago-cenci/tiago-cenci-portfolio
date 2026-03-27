@@ -5,12 +5,15 @@ import { cn } from "@/lib/utils";
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
-  const roles = ["Product Manager", "Strategy, Roadmap, Cross-Functional Leadership", "SaaS B2B, APIs, Data & AI"];
+  const roles = [
+    "Product Manager",
+    "B2B SaaS · Enterprise · AI · Data Platforms",
+    "Technical PM · Discovery · Delivery · Impact",
+  ];
 
   useEffect(() => {
     setIsVisible(true);
 
-    // Rotate through tech phrases
     const interval = setInterval(() => {
       setCurrentPhraseIndex((prev) => (prev + 1) % roles.length);
     }, 3000);
@@ -18,7 +21,6 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle smooth scrolling to sections
   const scrollToSection = (sectionId: string) => {
     document.querySelector(sectionId)?.scrollIntoView({
       behavior: "smooth",
@@ -29,7 +31,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen w-full flex flex-col justify-center relative overflow-hidden pt-16">
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-6">
-          {/* Texto à esquerda */}
+          {/* Text left */}
           <div className="flex-1 text-center md:text-left">
             <div
               className={cn(
@@ -73,7 +75,9 @@ const Hero = () => {
               )}
             >
               <p className="text-lg text-foreground/80 mb-8">
-                Technical Product Manager with experience building B2B SaaS products in data-heavy and API-driven environments since 2020. I work end-to-end across discovery, requirements, delivery, and post-launch analysis, partnering closely with engineering, data, and design teams. I’ve led MVPs, AI-driven initiatives, and complex integrations, delivering measurable business impact. Experience working in English with cross-functional teams and technical stakeholders in distributed environments.              </p>
+                Technical Product Manager with 4+ years building B2B SaaS, enterprise platforms, and AI-enabled products. Currently at{" "}
+                <span className="text-primary font-semibold">NDD Tech</span>, owning product strategy for a global device management platform used by 21,000+ organizations. I work end-to-end — from structured discovery and MVP definition to delivery and post-launch analysis — partnering closely with engineering, data, and design teams. Proven track record in complex integrations, cross-functional leadership, and shipping AI-driven features.
+              </p>
             </div>
 
             <div
@@ -108,7 +112,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Imagem à direita (visível em md+) */}
+          {/* Image right (md+) */}
           <div
             className={cn(
               "opacity-0 transition-all duration-1000 delay-200 hidden md:block",
