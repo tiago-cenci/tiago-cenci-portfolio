@@ -221,7 +221,7 @@ export const uxProjects: Project[] = [
     ],
 
     buttons: [
-      { label: "Product Case (Miro)", href: "https://miro.com/app/board/uXjVGDZzetw=/?share_link_id=752931549135" },
+      { label: "Product Case Study (Notion)", href: "https://www.notion.so/Product-Case-Study-MUVTRAINER-336048c25a048169a1cae5fde6a7aee8?source=copy_link" },
       { label: "Official Landing Page", href: "https:muvtrainer.com" }
 
     ]
