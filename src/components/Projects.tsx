@@ -36,94 +36,94 @@ type Project = {
 
 export const uxProjects: Project[] = [
   // ─── PROJECT 1 ───────────────────────────────────────────────
-  {
-    id: 1,
-    title: "PrintControl — Enterprise Print Management Platform",
-    copyright: `© ${currentYear} NDD TECH`,
-    description:
-      "Led product strategy and roadmap for a B2B2B SaaS platform managing 21,000+ organizations globally. Owned the modernization of a validated legacy product into a scalable, device-based subscription model with ~$24M ARR.",
-    tags: ["Product Strategy", "B2B SaaS", "Platform PM", "Enterprise", "Roadmap"],
-    // ⚠️ PENDENTE: Substituir pela URL de um screenshot real do PrintControl/Orbix (dashboard, tela de relatório, etc.)
-    image: "https://placehold.co/800x450/1a1a2e/ffffff?text=PrintControl+%E2%80%94+NDD+Orbix",
-    categories: ["ux"],
-    situation:
-      "NDD's legacy print management product (NDD Print 360) had validated market demand — 21,000+ organizations and ~$24M ARR — but was built on aging architecture that capped scalability, blocked modern monetization models, and prevented expansion into Managed Print Services (MPS) channels. The product lacked governance features and automation capabilities required to compete against PaperCut and uniFLOW in enterprise and government segments.",
-    task:
-      "Own the product strategy, roadmap, and discovery process to rebuild the product as a modern SaaS module (PrintControl) within the NDD Orbix platform — preserving validated value while introducing scalable architecture, device-based pricing, and a B2B2B distribution model (vendors → partners → end customers) across printing outsourcing providers and printer OEM channels.",
-    action: [
-      "• Defined product vision, positioning, and B2B2B go-to-market strategy targeting outsourcing providers and OEM partnerships (HP, Ricoh, Epson, Brother) — moving from direct sales to a partner-led distribution motion.",
-      "• Established the North Star Metric (number of managed MFP devices on the platform) as the primary revenue and growth driver, aligning all squad OKRs, roadmap decisions, and pricing model around device-based monetization.",
-      "• Designed the full product framework: Business Model Canvas, Value Proposition Canvas, JTBD mapping, hypothesis-experiment map, and a 3-horizon roadmap (operational improvements → automation & analytics → AI-driven optimization).",
-      "• Proposed and drove company-wide adoption of a new upstream specification workflow (Product → Module → Resource → Initiative → Epic → PRD → Scope → User Stories → Acceptance Criteria) — accepted by peers, leadership, and executives, then standardized across all product teams in the business unit.",
-      "• Coordinated discovery and delivery across multiple engineering squads covering networking layers, device communication protocols, cloud services, and reporting infrastructure.",
-    ],
-    result: [
-      "• Platform operating at ~$24M ARR / ~$2M MRR with retention >90% and NPS of 62 — strong product-market fit indicators on a rebuilt foundation.",
-      "• Upstream workflow redesign adopted company-wide, reducing specification ambiguity and accelerating delivery cycles across all product teams.",
-      "• Dual monetization model established: per-device SaaS pricing for commercial clients + fixed-contract ARR for government and large enterprise, expanding addressable segments.",
-      "• Product positioned for AI-driven optimization phase in the long-term roadmap, with module expansion and cross-sell potential across the broader Orbix ecosystem.",
-    ],
-    toolsValue: [
-      "• Notion used as the primary PM workspace for product strategy documentation, roadmap, and stakeholder alignment artifacts.",
-      "• Miro used for technical and business solution diagrams during discovery — clarifying system behavior, device communication flows, and integration architecture.",
-      "• OKR + KPI framework (strategic, tactical, operational) implemented to ensure alignment between engineering execution and business outcomes.",
-    ],
-    images: [
-      // ⚠️ PENDENTE: Adicionar screenshots reais do produto — sugestões abaixo:
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Dashboard+PrintControl", caption: "⚠️ PENDENTE: Screenshot do dashboard de gestão de dispositivos" },
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Relatório+de+uso", caption: "⚠️ PENDENTE: Tela de relatório de volume e custos de impressão" },
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Product+Framework", caption: "⚠️ PENDENTE: Foto/export do framework de produto no Notion ou Miro" },
-    ],
-    buttons: [
-      // ⚠️ PENDENTE: Verificar se o link do Notion é público e pode ser compartilhado
-      { label: "Product Framework (Notion)", href: "https://www.notion.so/33e88b305a1480148c02f0895daaa919?v=33e88b305a148108b308000cb5e0737a" },
-      // ⚠️ PENDENTE: Adicionar link para a página oficial do produto se disponível
-      // { label: "Official Product Page", href: "PENDENTE" },
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "PrintControl — Enterprise Print Management Platform",
+  //   copyright: `© ${currentYear} NDD TECH`,
+  //   description:
+  //     "Led product strategy and roadmap for a B2B2B SaaS platform managing 21,000+ organizations globally. Owned the modernization of a validated legacy product into a scalable, device-based subscription model with ~$24M ARR.",
+  //   tags: ["Product Strategy", "B2B SaaS", "Platform PM", "Enterprise", "Roadmap"],
+  //   // ⚠️ PENDENTE: Substituir pela URL de um screenshot real do PrintControl/Orbix (dashboard, tela de relatório, etc.)
+  //   image: "https://placehold.co/800x450/1a1a2e/ffffff?text=PrintControl+%E2%80%94+NDD+Orbix",
+  //   categories: ["ux"],
+  //   situation:
+  //     "NDD's legacy print management product (NDD Print 360) had validated market demand — 25,000+ organizations — but was built on aging architecture that capped scalability, blocked modern monetization models, and prevented expansion into Managed Print Services (MPS) channels. The product lacked governance features and automation capabilities required to compete against PaperCut and uniFLOW in enterprise and government segments.",
+  //   task:
+  //     "Own the product strategy, roadmap, and discovery process to rebuild the product as a modern SaaS module (PrintControl) within the NDD Orbix platform — preserving validated value while introducing scalable architecture, device-based pricing, and a B2B2B distribution model (vendors → partners → end customers) across printing outsourcing providers and printer OEM channels.",
+  //   action: [
+  //     "• Defined product vision, positioning, and B2B2B go-to-market strategy targeting outsourcing providers and OEM partnerships (HP, Ricoh, Epson, Brother) — moving from direct sales to a partner-led distribution motion.",
+  //     "• Established the North Star Metric (number of managed MFP devices on the platform) as the primary revenue and growth driver, aligning all squad OKRs, roadmap decisions, and pricing model around device-based monetization.",
+  //     "• Designed the full product framework: Business Model Canvas, Value Proposition Canvas, JTBD mapping, hypothesis-experiment map, and a 3-horizon roadmap (operational improvements → automation & analytics → AI-driven optimization).",
+  //     "• Proposed and drove company-wide adoption of a new upstream specification workflow (Product → Module → Resource → Initiative → Epic → PRD → Scope → User Stories → Acceptance Criteria) — accepted by peers, leadership, and executives, then standardized across all product teams in the business unit.",
+  //     "• Coordinated discovery and delivery across multiple engineering squads covering networking layers, device communication protocols, cloud services, and reporting infrastructure.",
+  //   ],
+  //   result: [
+  //     "• Platform operating with retention >90% and NPS of 62 — strong product-market fit indicators on a rebuilt foundation.",
+  //     "• Upstream workflow redesign adopted company-wide, reducing specification ambiguity and accelerating delivery cycles across all product teams.",
+  //     "• Dual monetization model established: per-device SaaS pricing for commercial clients + fixed-contract ARR for government and large enterprise, expanding addressable segments.",
+  //     "• Product positioned for AI-driven optimization phase in the long-term roadmap, with module expansion and cross-sell potential across the broader Orbix ecosystem.",
+  //   ],
+  //   toolsValue: [
+  //     "• Notion used as the primary PM workspace for product strategy documentation, roadmap, and stakeholder alignment artifacts.",
+  //     "• Miro used for technical and business solution diagrams during discovery — clarifying system behavior, device communication flows, and integration architecture.",
+  //     "• OKR + KPI framework (strategic, tactical, operational) implemented to ensure alignment between engineering execution and business outcomes.",
+  //   ],
+  //   images: [
+  //     // ⚠️ PENDENTE: Adicionar screenshots reais do produto — sugestões abaixo:
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Dashboard+PrintControl", caption: "⚠️ PENDENTE: Screenshot do dashboard de gestão de dispositivos" },
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Relatório+de+uso", caption: "⚠️ PENDENTE: Tela de relatório de volume e custos de impressão" },
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Product+Framework", caption: "⚠️ PENDENTE: Foto/export do framework de produto no Notion ou Miro" },
+  //   ],
+  //   buttons: [
+  //     // ⚠️ PENDENTE: Verificar se o link do Notion é público e pode ser compartilhado
+  //     { label: "Product Framework (Notion)", href: "https://www.notion.so/33e88b305a1480148c02f0895daaa919?v=33e88b305a148108b308000cb5e0737a" },
+  //     // ⚠️ PENDENTE: Adicionar link para a página oficial do produto se disponível
+  //     // { label: "Official Product Page", href: "PENDENTE" },
+  //   ],
+  // },
 
   // ─── PROJECT 2 ───────────────────────────────────────────────
-  {
-    id: 2,
-    title: "Scan to Cloud — Discovery That Unlocked $240k+ in ARR",
-    copyright: `© ${currentYear} NDD TECH`,
-    description:
-      "Ran end-to-end product discovery on a feature with 0.2% adoption. Redesigned the solution — directly enabling a state government contract worth $240k+ in incremental ARR.",
-    tags: ["Product Discovery", "UX/UI Design", "B2B SaaS", "Government", "Revenue Impact"],
-    // ⚠️ PENDENTE: Substituir pela URL de um screenshot real da solução redesenhada (UX/UI do Scan to Cloud)
-    image: "https://placehold.co/800x450/1a1a2e/ffffff?text=Scan+to+Cloud+%E2%80%94+NDD+Orbix",
-    categories: ["ux"],
-    situation:
-      "The Digitization/Scan to Cloud feature had existed in the platform for years but had only 39 active users out of 21,194 organizations — a 0.2% adoption rate. The feature was technically functional but too complex for end users to configure and operate independently. Despite low adoption, scan-to-cloud is a contractual requirement in many government and enterprise procurement processes worldwide — making it a high-value, underperforming capability.",
-    task:
-      "Run structured product discovery to identify the real barrier behind 0.2% adoption, then redesign and specify a simpler, scalable solution with a direct business target: unlock qualification for a state government contract requiring OneDrive-integrated scan-to-cloud functionality, representing $240k+ in incremental ARR over a contract duration of up to 4 years.",
-    action: [
-      "• Conducted discovery interviews with key partner organizations and market specialists to identify the root cause of low adoption — pinpointing that configuration complexity and lack of intuitive cloud connector management were the primary barriers, not feature awareness.",
-      "• Redesigned the end-to-end solution in close collaboration with engineers and architects, defining a simpler UX flow, cleaner cloud integration model, and reduced setup friction.",
-      "• Produced full UX/UI design, PRD, workflow diagrams, and technical specification in Miro — enabling the engineering team to move directly into development with minimal back-and-forth.",
-      "• Aligned product scope and delivery timeline with the state government procurement cycle to meet contract qualification requirements.",
-    ],
-    result: [
-      "• Redesigned solution directly enabled qualification for a state government contract worth $240k+ in incremental ARR (contract duration up to 4 years).",
-      "• Projected adoption rate trajectory shifted from 0.2% toward broader deployment across new government and enterprise customer segments.",
-      "• Established a repeatable discovery-to-spec process for feature rehabilitation — identifying and unlocking latent business value in underperforming platform capabilities.",
-    ],
-    toolsValue: [
-      "• Miro used for workflow diagrams, UX flows, and technical architecture diagrams during discovery and specification phases.",
-      "• PRD and product spec documentation structured to bridge business requirements (government procurement criteria) with technical implementation constraints.",
-      // ⚠️ PENDENTE: Adicionar ferramenta usada para entrevistas/pesquisa de discovery se relevante (ex: Notion, planilha, gravações)
-    ],
-    images: [
-      // ⚠️ PENDENTE: Adicionar screenshots reais — sugestões abaixo:
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+UX+Flow+Redesign", caption: "⚠️ PENDENTE: Export do fluxo UX redesenhado no Miro ou Figma" },
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Before+vs+After", caption: "⚠️ PENDENTE: Comparação da solução antiga (complexa) vs nova (simplificada)" },
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+PRD+or+Spec", caption: "⚠️ PENDENTE: Screenshot do PRD ou da especificação técnica no Notion" },
-    ],
-    buttons: [
-      // ⚠️ PENDENTE: Adicionar link para o case study no Notion, PRD ou Miro se quiser tornar público
-      // { label: "Product Spec (Notion)", href: "PENDENTE" },
-    ],
-  },
+  // {
+  //   id: 2,
+  //   title: "Scan to Cloud — Discovery That Unlocked $240k+ in ARR",
+  //   copyright: `© ${currentYear} NDD TECH`,
+  //   description:
+  //     "Ran end-to-end product discovery on a feature with 0.2% adoption. Redesigned the solution — directly enabling a state government contract worth $240k+ in incremental ARR.",
+  //   tags: ["Product Discovery", "UX/UI Design", "B2B SaaS", "Government", "Revenue Impact"],
+  //   // ⚠️ PENDENTE: Substituir pela URL de um screenshot real da solução redesenhada (UX/UI do Scan to Cloud)
+  //   image: "https://placehold.co/800x450/1a1a2e/ffffff?text=Scan+to+Cloud+%E2%80%94+NDD+Orbix",
+  //   categories: ["ux"],
+  //   situation:
+  //     "The Digitization/Scan to Cloud feature had existed in the platform for years but had only 39 active users out of 21,194 organizations — a 0.2% adoption rate. The feature was technically functional but too complex for end users to configure and operate independently. Despite low adoption, scan-to-cloud is a contractual requirement in many government and enterprise procurement processes worldwide — making it a high-value, underperforming capability.",
+  //   task:
+  //     "Run structured product discovery to identify the real barrier behind 0.2% adoption, then redesign and specify a simpler, scalable solution with a direct business target: unlock qualification for a state government contract requiring OneDrive-integrated scan-to-cloud functionality, representing $240k+ in incremental ARR over a contract duration of up to 4 years.",
+  //   action: [
+  //     "• Conducted discovery interviews with key partner organizations and market specialists to identify the root cause of low adoption — pinpointing that configuration complexity and lack of intuitive cloud connector management were the primary barriers, not feature awareness.",
+  //     "• Redesigned the end-to-end solution in close collaboration with engineers and architects, defining a simpler UX flow, cleaner cloud integration model, and reduced setup friction.",
+  //     "• Produced full UX/UI design, PRD, workflow diagrams, and technical specification in Miro — enabling the engineering team to move directly into development with minimal back-and-forth.",
+  //     "• Aligned product scope and delivery timeline with the state government procurement cycle to meet contract qualification requirements.",
+  //   ],
+  //   result: [
+  //     "• Redesigned solution directly enabled qualification for a state government contract worth $240k+ in incremental ARR (contract duration up to 4 years).",
+  //     "• Projected adoption rate trajectory shifted from 0.2% toward broader deployment across new government and enterprise customer segments.",
+  //     "• Established a repeatable discovery-to-spec process for feature rehabilitation — identifying and unlocking latent business value in underperforming platform capabilities.",
+  //   ],
+  //   toolsValue: [
+  //     "• Miro used for workflow diagrams, UX flows, and technical architecture diagrams during discovery and specification phases.",
+  //     "• PRD and product spec documentation structured to bridge business requirements (government procurement criteria) with technical implementation constraints.",
+  //     // ⚠️ PENDENTE: Adicionar ferramenta usada para entrevistas/pesquisa de discovery se relevante (ex: Notion, planilha, gravações)
+  //   ],
+  //   images: [
+  //     // ⚠️ PENDENTE: Adicionar screenshots reais — sugestões abaixo:
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+UX+Flow+Redesign", caption: "⚠️ PENDENTE: Export do fluxo UX redesenhado no Miro ou Figma" },
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Before+vs+After", caption: "⚠️ PENDENTE: Comparação da solução antiga (complexa) vs nova (simplificada)" },
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+PRD+or+Spec", caption: "⚠️ PENDENTE: Screenshot do PRD ou da especificação técnica no Notion" },
+  //   ],
+  //   buttons: [
+  //     // ⚠️ PENDENTE: Adicionar link para o case study no Notion, PRD ou Miro se quiser tornar público
+  //     // { label: "Product Spec (Notion)", href: "PENDENTE" },
+  //   ],
+  // },
 
   // ─── PROJECT 3 ───────────────────────────────────────────────
   {
