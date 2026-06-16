@@ -7,8 +7,9 @@ const Hero = () => {
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   const roles = [
     "Product Manager",
-    "B2B SaaS · Enterprise · AI · Data Platforms",
-    "Technical PM · Discovery · Delivery · Impact",
+    "B2B SaaS & Enterprise Platforms",
+    "AI, Data & Integrations",
+    "0→1 Product Builder"
   ];
 
   useEffect(() => {
@@ -75,8 +76,13 @@ const Hero = () => {
               )}
             >
               <p className="text-lg text-foreground/80 mb-8">
-                Technical Product Manager with 4+ years building B2B SaaS, enterprise platforms, and AI-enabled products. Currently at{" "}
-                <span className="text-primary font-semibold">NDD Tech</span>, owning product strategy for a global device management platform used by 21,000+ organizations. I work end-to-end — from structured discovery and MVP definition to delivery and post-launch analysis — partnering closely with engineering, data, and design teams. Proven track record in complex integrations, cross-functional leadership, and shipping AI-driven features.
+                Product Manager with 5+ years of experience building B2B SaaS, enterprise platforms, and AI-driven products in complex, data-intensive environments. My background combines product strategy, customer discovery, and technical depth, leading initiatives from 0→1 launch through scale. I’ve worked across enterprise ERP, platform products, API integrations, regulatory workflows, and AI initiatives, partnering closely with Engineering, Design, and business stakeholders to solve complex problems and deliver measurable business outcomes.
+
+                Selected impact:
+                • Led the 0→1 launch of an AI-powered product initiative in 4 weeks, driving an 11% increase in client portfolio growth and earning national media coverage.
+                • Own product strategy for a B2B2B platform used by 25k+ organizations globally, serving millions of end users through enterprise partner channels.
+                • Spearheaded the first Bayer Intacta royalties integration in Brazil, transforming a manual process into a scalable product capability and creating new commercial opportunities.
+                • Led product strategy and delivery for SaaS ERP solutions serving 500+ agribusiness companies, including roadmap definition, customer discovery, MVP scoping, and cross-functional execution.
               </p>
             </div>
 
