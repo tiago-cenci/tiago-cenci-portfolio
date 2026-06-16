@@ -214,98 +214,83 @@ export const uxProjects: Project[] = [
       { label: "Discovery Artifacts (Notion)", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" },
     ],
   },
+{
+  id: 5,
+  title: "Bayer Intacta Royalties Integration",
+  copyright: `© ${currentYear} VIASOFT`,
+  description:
+    "Led discovery and delivery of the first Bayer Intacta royalties integration within Agrotitan ERP, transforming a manual process into a scalable product capability used by agribusiness companies to manage soybean technology royalties directly inside operational workflows.",
+
+  tags: [
+    "Product Management",
+    "Enterprise SaaS",
+    "API Integrations",
+    "Agribusiness",
+    "B2B Software"
+  ],
+
+  image: "https://viasoft.com.br/wp-content/uploads/2023/01/agrotitan-cerealistas.jpg",
+
+  categories: ["ux"],
+
+  situation:
+    "Bayer's Intacta royalties program is a critical part of Brazil's soybean supply chain. However, the process of managing technology credits and royalties involved manual workflows, limited visibility, operational overhead, and reconciliation challenges between grain buyers, producers, and Bayer. Customers needed a seamless ERP workflow while Bayer required compliance with strict business rules.",
+
+  task:
+    "Lead discovery, product definition, and delivery for the first Bayer Intacta royalties integration within Agrotitan ERP. The goal was to transform a manual and fragmented process into a scalable product capability that balanced customer usability, Bayer requirements, and commercial viability.",
+
+  action: [
+    "• Conducted discovery sessions with Bayer stakeholders and a pilot customer to understand operational workflows, royalties rules, and existing pain points.",
+
+    "• Mapped the end-to-end process across producers, grain buyers, ERP users, and Bayer systems, identifying friction points and validation requirements.",
+
+    "• Defined product workflows, business rules, exception handling, and functional specifications to ensure royalties calculations remained transparent and auditable.",
+
+    "• Acted as the primary bridge between Bayer, customers, and engineering teams, aligning requirements through multiple feedback and validation cycles.",
+
+    "• Supported implementation, testing, pilot rollout, and customer onboarding to ensure successful production adoption.",
+
+    "• Structured the solution as a reusable product capability rather than a customer-specific customization, enabling future commercialization across the customer base."
+  ],
+
+  result: [
+    "• Successfully launched the first Bayer Intacta royalties integration within the Agrotitan ERP ecosystem.",
+
+    "• Replaced a highly manual operational process with a productized workflow embedded directly into daily agribusiness operations.",
+
+    "• Created a new premium product capability that generated additional commercial opportunities and increased customer interest in the platform.",
+
+    "• Strengthened the company's strategic relationship with Bayer and positioned the organization as a reference partner for Intacta integration initiatives.",
+
+    "• Established the foundation for adoption across additional agribusiness customers managing soybean royalties."
+  ],
+
+  toolsValue: [
+    "• Customer discovery and process mapping were essential to reconcile Bayer's business rules with real operational workflows used by grain buyers.",
+
+    "• Functional specifications and workflow modeling aligned stakeholders across Bayer, customers, and engineering teams before implementation.",
+
+    "• Pilot customer validation reduced adoption risk and ensured the final experience fit naturally into existing ERP processes."
+  ],
+
+  images: [
     {
-id: 7,
-title: "Bayer Intacta Royalties Integration",
-copyright: `© ${currentYear} VIASOFT`,
-description:
-"Led discovery and product delivery for the first Bayer Intacta royalties integration in Brazil, transforming a complex manual process into a scalable ERP capability that created new revenue opportunities and strengthened the company's position in the agribusiness ecosystem.",
+      url: "https://viasoft.com.br/wp-content/uploads/2023/01/agrotitan-cerealistas.jpg",
+      caption: "Agrotitan ERP platform used by grain buyers and agribusiness companies."
+    }
+  ],
 
-tags: [
-"Product Management",
-"Enterprise SaaS",
-"API Integrations",
-"Agribusiness",
-"B2B Software"
-],
-
-image: BayerIntactaImg,
-
-categories: ["ux"],
-
-situation:
-"Bayer's Intacta technology royalties program plays a critical role in the Brazilian soybean supply chain. However, the operational process between grain buyers, producers, and Bayer was largely manual, generating friction, lack of transparency, and operational overhead. Bayer was looking for a software partner capable of integrating the process directly into ERP workflows, while customers needed a solution that fit naturally into their daily operations without adding complexity.",
-
-task:
-"Lead product discovery and definition for the first ERP integration with Bayer's Intacta royalties program in Brazil. The challenge was to reconcile Bayer's business rules, customer operational realities, and technical constraints into a scalable product capability that could be adopted by agribusiness companies and commercialized as a premium module.",
-
-action: [
-"• Conducted discovery sessions with Bayer stakeholders and a pilot customer to understand the existing manual workflow, business rules, pain points, and operational constraints.",
-
-```
-"• Mapped end-to-end processes across producers, grain buyers, ERP users, and Bayer systems, identifying gaps between regulatory requirements and real-world operations.",
-
-"• Designed user flows, functional specifications, validation rules, and exception scenarios to ensure royalties calculations and reporting remained accurate and transparent.",
-
-"• Acted as the primary bridge between Bayer, customers, and engineering teams, aligning expectations and iterating on requirements through multiple feedback cycles.",
-
-"• Supported development, testing, pilot rollout, and customer validation to ensure the integration could operate reliably in production environments.",
-
-"• Structured the solution as a reusable product capability rather than a customer-specific customization, enabling future commercialization across the company's customer base."
-```
-
-],
-
-result: [
-"• Successfully launched the first Bayer Intacta royalties integration in Brazil within the company's ERP ecosystem.",
-
-```
-"• Replaced a highly manual operational process with a scalable product workflow embedded directly into customers' daily operations.",
-
-"• Created a new premium product offering that generated additional commercial opportunities and increased customer interest in the platform.",
-
-"• Strengthened the company's strategic relationship with Bayer and positioned the organization as a reference partner for Intacta integration initiatives.",
-
-"• Established a foundation for broader adoption across additional agribusiness customers seeking streamlined royalties management."
-```
-
-],
-
-toolsValue: [
-"• BPMN process mapping was used to model operational flows and identify integration requirements across multiple stakeholders.",
-
-```
-"• Functional specifications and workflow diagrams enabled alignment between business, customer, and engineering perspectives before implementation.",
-
-"• Pilot customer validation reduced adoption risk and ensured the final solution reflected real operational workflows rather than theoretical requirements."
-```
-
-],
-
-images: [
-{
-url: BayerProcessFlowImg,
-caption: "End-to-end royalties process mapping between producers, grain buyers, Bayer, and ERP workflows"
+  buttons: [
+    {
+      label: "Agrotitan Platform",
+      href: "https://viasoft.com.br/agrotitan/"
+    },
+    {
+      label: "Agrotitan Cerealistas",
+      href: "https://viasoft.com.br/agrotitan/cerealistas/"
+    }
+  ]
 },
-{
-url: BayerUserFlowImg,
-caption: "User flow and validation logic designed during product discovery"
-},
-{
-url: BayerIntegrationImg,
-caption: "ERP workflow supporting automated royalties management and reporting"
-}
-],
-
-buttons: [
-{
-label: "Product Discovery Artifacts",
-href: "#"
-}
-]
-}
-
-];
 ];
 
 export const devProjects: Project[] = [
