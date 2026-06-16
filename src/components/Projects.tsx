@@ -293,7 +293,7 @@ export const uxProjects: Project[] = [
 },
 ];
 
-export const devProjects: Project[] = [
+export const devProjects: Project[] = []
   // ─── PROJECT 5 ───────────────────────────────────────────────
   // {
   //   id: 5,
