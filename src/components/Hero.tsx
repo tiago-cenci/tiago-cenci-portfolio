@@ -77,13 +77,7 @@ const Hero = () => {
             >
               <p className="text-lg text-foreground/80 mb-8">
                 Product Manager with 5+ years of experience building B2B SaaS, enterprise platforms, and AI-driven products in complex, data-intensive environments. My background combines product strategy, customer discovery, and technical depth, leading initiatives from 0→1 launch through scale. I’ve worked across enterprise ERP, platform products, API integrations, regulatory workflows, and AI initiatives, partnering closely with Engineering, Design, and business stakeholders to solve complex problems and deliver measurable business outcomes.
-
-                Selected impact:
-                • Led the 0→1 launch of an AI-powered product initiative in 4 weeks, driving an 11% increase in client portfolio growth and earning national media coverage.
-                • Own product strategy for a B2B2B platform used by 25k+ organizations globally, serving millions of end users through enterprise partner channels.
-                • Spearheaded the first Bayer Intacta royalties integration in Brazil, transforming a manual process into a scalable product capability and creating new commercial opportunities.
-                • Led product strategy and delivery for SaaS ERP solutions serving 500+ agribusiness companies, including roadmap definition, customer discovery, MVP scoping, and cross-functional execution.
-              </p>
+           </p>
             </div>
 
             <div
