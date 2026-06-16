@@ -214,89 +214,181 @@ export const uxProjects: Project[] = [
       { label: "Discovery Artifacts (Notion)", href: "https://glossy-glazer-25a.notion.site/185151a886bd8037a63cdbb68b665e87?v=185151a886bd80e4948a000cb33f0c03&pvs=74" },
     ],
   },
+    {
+id: 7,
+title: "Bayer Intacta Royalties Integration",
+copyright: `© ${currentYear} VIASOFT`,
+description:
+"Led discovery and product delivery for the first Bayer Intacta royalties integration in Brazil, transforming a complex manual process into a scalable ERP capability that created new revenue opportunities and strengthened the company's position in the agribusiness ecosystem.",
+
+tags: [
+"Product Management",
+"Enterprise SaaS",
+"API Integrations",
+"Agribusiness",
+"B2B Software"
+],
+
+image: BayerIntactaImg,
+
+categories: ["ux"],
+
+situation:
+"Bayer's Intacta technology royalties program plays a critical role in the Brazilian soybean supply chain. However, the operational process between grain buyers, producers, and Bayer was largely manual, generating friction, lack of transparency, and operational overhead. Bayer was looking for a software partner capable of integrating the process directly into ERP workflows, while customers needed a solution that fit naturally into their daily operations without adding complexity.",
+
+task:
+"Lead product discovery and definition for the first ERP integration with Bayer's Intacta royalties program in Brazil. The challenge was to reconcile Bayer's business rules, customer operational realities, and technical constraints into a scalable product capability that could be adopted by agribusiness companies and commercialized as a premium module.",
+
+action: [
+"• Conducted discovery sessions with Bayer stakeholders and a pilot customer to understand the existing manual workflow, business rules, pain points, and operational constraints.",
+
+```
+"• Mapped end-to-end processes across producers, grain buyers, ERP users, and Bayer systems, identifying gaps between regulatory requirements and real-world operations.",
+
+"• Designed user flows, functional specifications, validation rules, and exception scenarios to ensure royalties calculations and reporting remained accurate and transparent.",
+
+"• Acted as the primary bridge between Bayer, customers, and engineering teams, aligning expectations and iterating on requirements through multiple feedback cycles.",
+
+"• Supported development, testing, pilot rollout, and customer validation to ensure the integration could operate reliably in production environments.",
+
+"• Structured the solution as a reusable product capability rather than a customer-specific customization, enabling future commercialization across the company's customer base."
+```
+
+],
+
+result: [
+"• Successfully launched the first Bayer Intacta royalties integration in Brazil within the company's ERP ecosystem.",
+
+```
+"• Replaced a highly manual operational process with a scalable product workflow embedded directly into customers' daily operations.",
+
+"• Created a new premium product offering that generated additional commercial opportunities and increased customer interest in the platform.",
+
+"• Strengthened the company's strategic relationship with Bayer and positioned the organization as a reference partner for Intacta integration initiatives.",
+
+"• Established a foundation for broader adoption across additional agribusiness customers seeking streamlined royalties management."
+```
+
+],
+
+toolsValue: [
+"• BPMN process mapping was used to model operational flows and identify integration requirements across multiple stakeholders.",
+
+```
+"• Functional specifications and workflow diagrams enabled alignment between business, customer, and engineering perspectives before implementation.",
+
+"• Pilot customer validation reduced adoption risk and ensured the final solution reflected real operational workflows rather than theoretical requirements."
+```
+
+],
+
+images: [
+{
+url: BayerProcessFlowImg,
+caption: "End-to-end royalties process mapping between producers, grain buyers, Bayer, and ERP workflows"
+},
+{
+url: BayerUserFlowImg,
+caption: "User flow and validation logic designed during product discovery"
+},
+{
+url: BayerIntegrationImg,
+caption: "ERP workflow supporting automated royalties management and reporting"
+}
+],
+
+buttons: [
+{
+label: "Product Discovery Artifacts",
+href: "#"
+}
+]
+}
+
+];
 ];
 
 export const devProjects: Project[] = [
   // ─── PROJECT 5 ───────────────────────────────────────────────
-  {
-    id: 5,
-    title: "Text to SQL with LLMs",
-    copyright: `© ${currentYear} TIAGO CENCI`,
-    description:
-      "Bachelor's thesis: built a full-stack NLP system enabling natural language SQL generation, then benchmarked GPT-4o against Gemini 2.0-flash across 50+ query types and multiple DBMS.",
-    tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
-    image: "https://i.imgur.com/z9WCoV6.png",
-    categories: ["dev"],
-    situation:
-      "Non-technical users — analysts, operations teams, business stakeholders — are locked out of direct database querying, creating bottlenecks on data and engineering teams every time someone needs a business insight. Existing Text-to-SQL solutions lacked systematic benchmarking across different DBMS environments, making it unclear which LLMs were actually reliable for production use.",
-    task:
-      "Design and develop a full-stack NLP-driven system capable of converting natural language queries into SQL, then design and execute a rigorous benchmarking methodology comparing GPT-4o and Gemini 2.0-flash across PostgreSQL, MySQL, and Oracle — producing evidence-based conclusions about LLM reliability for real-world database querying.",
-    action: [
-      "• Built a full-stack web application using Flask (backend) and React (frontend) with direct integration to OpenAI and Google Gemini APIs, supporting natural language input and real-time SQL generation.",
-      "• Designed and executed a comprehensive benchmarking strategy across 50+ unique query types — covering simple selections, multi-table joins, aggregations, subqueries, and schema-specific edge cases — to stress-test model reliability across DBMS variants.",
-      "• Implemented context caching mechanisms to optimize API response latency and reduce call overhead during benchmark execution.",
-      "• Structured the research methodology to produce reproducible, comparable results — controlling for query complexity, DBMS dialect differences, and prompt formatting variables.",
-    ],
-    result: [
-      // ⚠️ PENDENTE: Preencher com os números reais de acurácia da sua tese — ex: "GPT-4o achieved X% accuracy vs Gemini's Y% across all query types" — isso é o dado mais importante deste projeto
-      "• ⚠️ PENDENTE: Inserir acurácia real dos modelos — ex: 'GPT-4o achieved [X]% overall accuracy vs Gemini 2.0-flash at [Y]%, with GPT-4o showing stronger performance on [query type] and Gemini outperforming on [query type]'",
-      "• Demonstrated a viable path for enabling BI and operations teams to query databases independently — reducing dependency on data/engineering teams for routine analytical requests.",
-      "• Thesis published and available in the UTFPR academic repository, providing a reusable benchmarking framework for future LLM evaluation in SQL generation contexts.",
-    ],
-    toolsValue: [
-      "• Flask provided a lightweight backend framework optimized for API-heavy integration, keeping infrastructure complexity low during development.",
-      "• React enabled rapid UI iteration, allowing the benchmarking interface to evolve alongside the research methodology.",
-      "• Context caching strategy reduced average API latency by avoiding redundant schema injection on repeated queries — a practical optimization applicable to production deployments.",
-    ],
-    images: [
-      { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "AI generating a data visualization from a natural language request" },
-      { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Natural language input triggering structured database query" },
-      // ⚠️ PENDENTE: Adicionar screenshot do benchmark results — tabela comparando GPT-4o vs Gemini por tipo de query e DBMS
-      { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Benchmark+Results+Table", caption: "⚠️ PENDENTE: Tabela de resultados do benchmark GPT-4o vs Gemini por tipo de query" },
-    ],
-    buttons: [
-      { label: "Bachelor's Thesis (UTFPR Repository)", href: "https://riut.utfpr.edu.br/jspui/handle/1/34422" },
-      { label: "Frontend Source (GitHub)", href: "https://github.com/tiago-cenci/AI-text-to-sql-Frontend" },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Text to SQL with LLMs",
+  //   copyright: `© ${currentYear} TIAGO CENCI`,
+  //   description:
+  //     "Bachelor's thesis: built a full-stack NLP system enabling natural language SQL generation, then benchmarked GPT-4o against Gemini 2.0-flash across 50+ query types and multiple DBMS.",
+  //   tags: ["React", "Python", "Flask", "GPT-4o", "Gemini 2.0-flash"],
+  //   image: "https://i.imgur.com/z9WCoV6.png",
+  //   categories: ["dev"],
+  //   situation:
+  //     "Non-technical users — analysts, operations teams, business stakeholders — are locked out of direct database querying, creating bottlenecks on data and engineering teams every time someone needs a business insight. Existing Text-to-SQL solutions lacked systematic benchmarking across different DBMS environments, making it unclear which LLMs were actually reliable for production use.",
+  //   task:
+  //     "Design and develop a full-stack NLP-driven system capable of converting natural language queries into SQL, then design and execute a rigorous benchmarking methodology comparing GPT-4o and Gemini 2.0-flash across PostgreSQL, MySQL, and Oracle — producing evidence-based conclusions about LLM reliability for real-world database querying.",
+  //   action: [
+  //     "• Built a full-stack web application using Flask (backend) and React (frontend) with direct integration to OpenAI and Google Gemini APIs, supporting natural language input and real-time SQL generation.",
+  //     "• Designed and executed a comprehensive benchmarking strategy across 50+ unique query types — covering simple selections, multi-table joins, aggregations, subqueries, and schema-specific edge cases — to stress-test model reliability across DBMS variants.",
+  //     "• Implemented context caching mechanisms to optimize API response latency and reduce call overhead during benchmark execution.",
+  //     "• Structured the research methodology to produce reproducible, comparable results — controlling for query complexity, DBMS dialect differences, and prompt formatting variables.",
+  //   ],
+  //   result: [
+  //     // ⚠️ PENDENTE: Preencher com os números reais de acurácia da sua tese — ex: "GPT-4o achieved X% accuracy vs Gemini's Y% across all query types" — isso é o dado mais importante deste projeto
+  //     "• ⚠️ PENDENTE: Inserir acurácia real dos modelos — ex: 'GPT-4o achieved [X]% overall accuracy vs Gemini 2.0-flash at [Y]%, with GPT-4o showing stronger performance on [query type] and Gemini outperforming on [query type]'",
+  //     "• Demonstrated a viable path for enabling BI and operations teams to query databases independently — reducing dependency on data/engineering teams for routine analytical requests.",
+  //     "• Thesis published and available in the UTFPR academic repository, providing a reusable benchmarking framework for future LLM evaluation in SQL generation contexts.",
+  //   ],
+  //   toolsValue: [
+  //     "• Flask provided a lightweight backend framework optimized for API-heavy integration, keeping infrastructure complexity low during development.",
+  //     "• React enabled rapid UI iteration, allowing the benchmarking interface to evolve alongside the research methodology.",
+  //     "• Context caching strategy reduced average API latency by avoiding redundant schema injection on repeated queries — a practical optimization applicable to production deployments.",
+  //   ],
+  //   images: [
+  //     { url: "https://i.imgur.com/UjU4BzO.jpeg", caption: "AI generating a data visualization from a natural language request" },
+  //     { url: "https://i.imgur.com/qQ21Iz7.jpeg", caption: "Natural language input triggering structured database query" },
+  //     // ⚠️ PENDENTE: Adicionar screenshot do benchmark results — tabela comparando GPT-4o vs Gemini por tipo de query e DBMS
+  //     { url: "https://placehold.co/800x450/1a1a2e/ffffff?text=PENDENTE%3A+Benchmark+Results+Table", caption: "⚠️ PENDENTE: Tabela de resultados do benchmark GPT-4o vs Gemini por tipo de query" },
+  //   ],
+  //   buttons: [
+  //     { label: "Bachelor's Thesis (UTFPR Repository)", href: "https://riut.utfpr.edu.br/jspui/handle/1/34422" },
+  //     { label: "Frontend Source (GitHub)", href: "https://github.com/tiago-cenci/AI-text-to-sql-Frontend" },
+  //   ],
+  // },
 
   // ─── PROJECT 6 ───────────────────────────────────────────────
-  {
-    id: 6,
-    title: "This Portfolio",
-    copyright: `© ${currentYear} TIAGO CENCI`,
-    description:
-      "Designed and built this portfolio from scratch using React and TypeScript — a modular, accessible, open-source platform for presenting detailed PM case studies.",
-    tags: ["React", "TypeScript", "Vercel", "CI/CD"],
-    image: "https://i.imgur.com/UfqMT6K.png",
-    categories: ["dev"],
-    situation:
-      "Most PM portfolios are either generic PDF resumes or cluttered personal sites that bury the actual product thinking. I needed a platform that could present structured case studies — with context, decisions, and outcomes — rather than just listing job titles and bullet points.",
-    task:
-      "Design and develop a responsive, high-performance portfolio website that presents PM case studies in a structured format (STAR method), ensures accessibility and mobile performance, and is maintainable enough to update independently as new projects are added.",
-    action: [
-      "• Designed a clean, information-dense UI prioritizing content clarity over visual noise — with a modal-based case study format that surfaces structured product thinking without requiring navigation away from the projects page.",
-      "• Developed the site using React and TypeScript, implementing a modular component structure (ProjectCard, Dialog, filter system) for reusability and low maintenance overhead.",
-      "• Implemented WCAG accessibility guidelines and full mobile responsiveness, ensuring consistent experience across devices.",
-      "• Set up CI/CD via GitHub Actions for automated deployment to Vercel on every push to main.",
-    ],
-    result: [
-      "• Fully open-source portfolio with modular architecture — new projects can be added by updating a single data array, with no changes to component logic.",
-      "• Deployed and live at tiago-cenci-portfolio.vercel.app with sub-second load times on Vercel's global CDN.",
-    ],
-    toolsValue: [
-      "• TypeScript enforced strict type safety across the project data structure, eliminating a class of runtime errors that commonly occur when PM project entries have inconsistent fields.",
-      "• shadcn/ui Dialog component used for the case study modal — providing accessible, composable UI primitives without the overhead of a full component library.",
-      "• GitHub Actions CI/CD pipeline ensures the live site is always in sync with the main branch, with zero manual deployment steps.",
-    ],
-    images: [
-      { url: "https://i.imgur.com/UfqMT6K.png", caption: "Portfolio main page — projects grid with category filter" },
-    ],
-    buttons: [
-      { label: "Source Code (GitHub)", href: "https://github.com/tiago-cenci/tiago-cenci-portfolio" },
-    ],
-  },
-];
+  // {
+  //   id: 6,
+  //   title: "This Portfolio",
+  //   copyright: `© ${currentYear} TIAGO CENCI`,
+  //   description:
+  //     "Designed and built this portfolio from scratch using React and TypeScript — a modular, accessible, open-source platform for presenting detailed PM case studies.",
+  //   tags: ["React", "TypeScript", "Vercel", "CI/CD"],
+  //   image: "https://i.imgur.com/UfqMT6K.png",
+  //   categories: ["dev"],
+  //   situation:
+  //     "Most PM portfolios are either generic PDF resumes or cluttered personal sites that bury the actual product thinking. I needed a platform that could present structured case studies — with context, decisions, and outcomes — rather than just listing job titles and bullet points.",
+  //   task:
+  //     "Design and develop a responsive, high-performance portfolio website that presents PM case studies in a structured format (STAR method), ensures accessibility and mobile performance, and is maintainable enough to update independently as new projects are added.",
+  //   action: [
+  //     "• Designed a clean, information-dense UI prioritizing content clarity over visual noise — with a modal-based case study format that surfaces structured product thinking without requiring navigation away from the projects page.",
+  //     "• Developed the site using React and TypeScript, implementing a modular component structure (ProjectCard, Dialog, filter system) for reusability and low maintenance overhead.",
+  //     "• Implemented WCAG accessibility guidelines and full mobile responsiveness, ensuring consistent experience across devices.",
+  //     "• Set up CI/CD via GitHub Actions for automated deployment to Vercel on every push to main.",
+  //   ],
+  //   result: [
+  //     "• Fully open-source portfolio with modular architecture — new projects can be added by updating a single data array, with no changes to component logic.",
+  //     "• Deployed and live at tiago-cenci-portfolio.vercel.app with sub-second load times on Vercel's global CDN.",
+  //   ],
+  //   toolsValue: [
+  //     "• TypeScript enforced strict type safety across the project data structure, eliminating a class of runtime errors that commonly occur when PM project entries have inconsistent fields.",
+  //     "• shadcn/ui Dialog component used for the case study modal — providing accessible, composable UI primitives without the overhead of a full component library.",
+  //     "• GitHub Actions CI/CD pipeline ensures the live site is always in sync with the main branch, with zero manual deployment steps.",
+  //   ],
+  //   images: [
+  //     { url: "https://i.imgur.com/UfqMT6K.png", caption: "Portfolio main page — projects grid with category filter" },
+  //   ],
+  //   buttons: [
+  //     { label: "Source Code (GitHub)", href: "https://github.com/tiago-cenci/tiago-cenci-portfolio" },
+  //   ],
+  // },
+
 
 // ─────────────────────────────────────────────────────────────
 // Component — no changes below this line
