@@ -135,7 +135,7 @@ const ProjectPage: React.FC = () => {
                             {starSteps.length > 0 && (
                                 <section className="mt-12">
                                     <h2 className="text-3xl md:text-4xl font-bold gradient-text text-center mb-6">
-                                        Project Breakdown: The STAR Method
+                                        Product Case Study
                                     </h2>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
