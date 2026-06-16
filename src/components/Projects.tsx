@@ -127,7 +127,7 @@ export const uxProjects: Project[] = [
 
   // ─── PROJECT 3 ───────────────────────────────────────────────
   {
-    id: 3,
+    id: 2,
     title: "MUVTRAINER — B2B SaaS for Online Personal Trainers",
     copyright: `© ${currentYear} TIAGO CENCI`,
     description:
@@ -173,7 +173,7 @@ export const uxProjects: Project[] = [
 
   // ─── PROJECT 4 ───────────────────────────────────────────────
   {
-    id: 4,
+    id: 1,
     title: "AI Integration in Agribusiness ERP",
     copyright: `© ${currentYear} VIASOFT`,
     description:
@@ -215,8 +215,8 @@ export const uxProjects: Project[] = [
     ],
   },
 {
-  id: 5,
-  title: "Bayer Intacta Royalties Integration",
+  id: 3,
+  title: "Bayer Royalties Integration",
   copyright: `© ${currentYear} VIASOFT`,
   description:
     "Led discovery and delivery of the first Bayer Intacta royalties integration within Agrotitan ERP, transforming a manual process into a scalable product capability used by agribusiness companies to manage soybean technology royalties directly inside operational workflows.",
@@ -229,7 +229,7 @@ export const uxProjects: Project[] = [
     "B2B Software"
   ],
 
-  image: "https://viasoft.com.br/wp-content/uploads/2023/01/agrotitan-cerealistas.jpg",
+  image: "https://viasoft.com.br/wp-content/uploads/2021/11/integracoes.jpg",
 
   categories: ["ux"],
 
@@ -275,18 +275,18 @@ export const uxProjects: Project[] = [
 
   images: [
     {
-      url: "https://viasoft.com.br/wp-content/uploads/2023/01/agrotitan-cerealistas.jpg",
-      caption: "Agrotitan ERP platform used by grain buyers and agribusiness companies."
+      url: "https://viasoft.com.br/wp-content/uploads/2019/12/sistema-para-agroneg%C3%B3cio-1.png",
+      caption: "Agrotitan ERP - platform used by grain buyers and agribusiness companies."
     }
   ],
 
   buttons: [
     {
-      label: "Agrotitan Platform",
-      href: "https://viasoft.com.br/agrotitan/"
+      label: "One of the official guidelines for this project",
+      href: "https://atendimento.viasoft.com.br/kb/pt-br/article/585311/cobranca-de-royalties-its-no-faturamento-de-soja?ticketId=&q="
     },
     {
-      label: "Agrotitan Cerealistas",
+      label: "Product's official site",
       href: "https://viasoft.com.br/agrotitan/cerealistas/"
     }
   ]
