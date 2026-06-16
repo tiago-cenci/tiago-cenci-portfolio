@@ -193,6 +193,7 @@ export const uxProjects: Project[] = [
       "• Managed alignment across 20+ stakeholders spanning engineering, design, sales, and executive leadership — maintaining clear scope boundaries to prevent delivery risk.",
     ],
     result: [
+      "• Drove an 11% increase in the client portfolio of the product, generating an important new revenue",
       "• Product earned national press coverage on Globo Rural (Brazil's largest agribusiness media outlet), significantly boosting the company's innovation positioning in the market.",
       "• Shipped the full AI-powered assistant within the 4-week deadline, with 20+ contributors aligned and no scope slip.",
       "• Leadership decision to prioritize AI feature integration across additional company products, validating the approach and expanding the initiative's footprint beyond the original scope.",
